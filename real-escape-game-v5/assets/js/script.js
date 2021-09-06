@@ -23,6 +23,8 @@ $('#btn-start').on('click', async function() {
         $('#blackscreen').css('display','flex');
         document.addEventListener('touchmove', disableScroll, { passive: false });
         document.addEventListener('mousewheel', disableScroll, { passive: false });
+        //ブラックアウト後処理
+        d.querySelector('.header__logo').querySelector('img').src = "assets/images/logoafter.png";
         $('body').addClass('black-thema');
         let str = [];
         $('#blackscreen__statement > span').each(function(i){
@@ -46,6 +48,5 @@ $('#btn-start').on('click', async function() {
         document.removeEventListener('touchmove', disableScroll, { passive: false });
         document.removeEventListener('mousewheel', disableScroll, { passive: false });
         $('#blackscreen').css('display','none');
-        d.querySelector('.header__logo').querySelector('img').src = "assets/images/logoafter.png";
     }
 })
