@@ -1,4 +1,4 @@
-let countClickStartButton = 0;
+let countClickStartButton = 0, d = document;
 
 function delay(n){
     return new Promise(function(resolve){
@@ -46,5 +46,6 @@ $('#btn-start').on('click', async function() {
         document.removeEventListener('touchmove', disableScroll, { passive: false });
         document.removeEventListener('mousewheel', disableScroll, { passive: false });
         $('#blackscreen').css('display','none');
+        d.querySelector('.header__logo').querySelector('img').src = "assets/images/logoafter.png";
     }
 })
