@@ -42,7 +42,7 @@ $('#btn-start').on('click', async function() {
                 }
             });
         });
-        await delay(50);
+        await delay(40);
         document.removeEventListener('touchmove', disableScroll, { passive: false });
         document.removeEventListener('mousewheel', disableScroll, { passive: false });
         $('#blackscreen').css('display','none');
