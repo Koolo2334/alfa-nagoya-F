@@ -650,6 +650,14 @@ button {
   margin: 0;
 }
 
+.ruready {
+  background-color: #e6e6e6;
+}
+
+.ruready::placeholder {
+  color: #000;
+}
+
 /********************
 * Utility
 ********************/
