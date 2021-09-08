@@ -771,6 +771,6 @@ button {
 *******************/
 
 @font-face {
-  font-family: "Horror-R";
-  src: url(/real-escape-game-v5/assets/font/horror.ttff);
+  font-family: Horror-R;
+  src: url(/real-escape-game-v5/assets/font/horror.ttf);
 }
