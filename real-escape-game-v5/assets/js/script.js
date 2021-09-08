@@ -49,8 +49,6 @@ $('#btn-start').on('click', async function() {
         document.addEventListener('mousewheel', disableScroll, { passive: false });
         //ブラックアウト後処理
         d.querySelector('.header__logo').querySelector('img').src = "assets/images/logoafter.png";
-        $('.section--story').addClass('hidden');
-        $('.bg-color--keycolor').addClass('hidden');
         $('body').addClass('black-thema');
         $('#section--first').addClass('quiz1');
         $('#section--first__row .card__title').text('Hint');
