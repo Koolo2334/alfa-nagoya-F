@@ -1,4 +1,13 @@
 @charset "UTF-8";
+/******************
+* Fonts
+*******************/
+
+@font-face {
+  font-family: 'Horror-R';
+  src: url(/real-escape-game-v5/assets/font/horror.ttf);
+}
+
 /****************************
  * 共通CSSのテンプレートです。
 *****************************/
@@ -97,7 +106,7 @@ body {
 }
 
 #blackscreen__statement span span{
-  font-family: Horror-R, serif;
+  font-family: 'Horror-R', serif;
   font-size: 8vw;
   color: #fff;
   opacity: 0;
@@ -769,12 +778,3 @@ button {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
-
-/******************
-* Fonts
-*******************/
-
-@font-face {
-  font-family: Horror-R;
-  src: url(/real-escape-game-v5/assets/font/horror.ttf);
-}
