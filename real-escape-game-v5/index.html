@@ -59,10 +59,20 @@
         </div>
       </div>
     </section>
-    <section class="section bg-color--gray">
-      <div class="container">
-        <h2 class="section-title">ゲーム開始前の準備</h2>
-        <input type="text" class="font-eng text-center ruready" placeholder="Are you ready for game?">
+     <section class="section bg-color--gray">
+      <div class="container" id="section--first">
+        <h2 class="section-title" id="section--first__title">ゲーム開始前の準備</h2>
+        <p class="font-eng text-center" id="section--first__text">Are you ready for game?</p>
+        <div id="section--first__arrow"></div>
+        <div id="section--first__input">
+          <input id="section--first__input--1" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='A' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+          <input id="section--first__input--2" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='N' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+          <input id="section--first__input--3" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='S' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+          <input id="section--first__input--4" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='W' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+          <input id="section--first__input--5" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='E' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+          <input id="section--first__input--6" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='R' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+          <input id="section--first__input--7" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='.' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+        </div>
         <!--
           class名"row"内のclass名"column"が横並びになります。
           改行する場合は以下のように追加してください。
@@ -72,17 +82,18 @@
             </div>
           </div>
         -->
-        <div class="row">
+        <div class="row" id="section--first__row">
           <div class="column">
             <div class="card">
               <h3 class="card__title">遊ぶ日時を決めよう！</h3>
-              <p class="card__content">前後の説明、解説をあわせ、想定所要時間は100分〜120分です。途中で中断することもできますが、お時間に余裕があるときにご参加ください。</p>
+              <p class="card__content">前後の説明、解説をあわせ、想定所要時間は100分〜120分です。少しの間であれば途中で中断することもできますが、お時間に余裕があるときにご参加ください。</p>
             </div>
           </div>
           <div class="column">
             <div class="card">
               <h3 class="card__title">紙とペンを用意しよう！</h3>
               <p class="card__content">メモをとるための紙と筆記用具をお手元にご準備ください。</p>
+              <img class="card__quiz1-img" src="/assets/images/quiz1-img.png" alt="quiz1">
             </div>
           </div>
           <div class="column">
