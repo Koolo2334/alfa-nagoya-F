@@ -659,6 +659,10 @@ button {
   color: #000;
 }
 
+.black_thema .section--story, .black_thema .section--keycolor {
+  display: none;
+}
+
 /********************
 * Utility
 ********************/
