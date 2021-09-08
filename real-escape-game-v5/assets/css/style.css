@@ -297,6 +297,10 @@ button {
   cursor: pointer;
 }
 
+.card__quiz1-img {
+  display: none;
+}
+
 .card__content {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -772,5 +776,10 @@ button {
 
 @font-face {
   font-family: Horror-R;
+<<<<<<< HEAD
   src: url(/real-escape-game-v5/assets/font/horror.ttf);
 }
+=======
+  src: url(/real-escape-game-v5/assets/font/horror.ttff);
+}
+>>>>>>> 3c4d2daf5d0c47a76da1a35e0f79754dd0fe2094
