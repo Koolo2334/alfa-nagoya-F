@@ -97,7 +97,7 @@ body {
 }
 
 #blackscreen__statement span span{
-  font-family: 'New Tegomin', serif;
+  font-family: Horror-R, serif;
   font-size: 8vw;
   color: #fff;
   opacity: 0;
@@ -772,5 +772,5 @@ button {
 
 @font-face {
   font-family: Horror-R;
-  src: url(/real-escape-game-v5/assets/font/horror.ttf);
+  src: url(/real-escape-game-v5/assets/font/horror.ttff);
 }
