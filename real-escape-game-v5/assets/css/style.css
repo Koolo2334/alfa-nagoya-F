@@ -755,10 +755,6 @@ button {
   color: #000;
 }
 
-.black_thema section.section--story, .black_thema section.bg-color--keycolor {
-  display: none;
-}
-
 /********************
 * Utility
 ********************/
