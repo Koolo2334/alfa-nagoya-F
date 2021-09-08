@@ -659,7 +659,7 @@ button {
   color: #000;
 }
 
-.black_thema .section--story, .black_thema .section--keycolor {
+.black_thema section.section--story, .black_thema section.bg-color--keycolor {
   display: none;
 }
 
