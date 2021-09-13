@@ -4,6 +4,81 @@ let isFocused = false;
 let isClearQuiz1 = false;
 let isClearQuiz2 = false;
 
+for(let i = 0; i < 6; i++) {
+    window.history.pushState(null, null, null)
+}
+window.addEventListener('popstate', function(event) {
+    window.history.pushState(null, null, null)
+    if(countReload === 0) {
+        alertMessage = "...";
+    }else if(countReload === 1) {
+        alertMessage = "......";
+    }else if(countReload === 2) {
+        alertMessage = "............";
+    }else if(countReload === 3) {
+        alertMessage = "...............戻りたい?";
+    }else if(countReload === 4) {
+        alertMessage = "............";
+    }else if(countReload === 6) {
+        alertMessage = "...............無理だよ";
+    }else if(countReload === 7) {
+        alertMessage = "...............多分...";
+    }else if(countReload === 8) {
+        alertMessage = "............";
+    }else if(countReload === 13) {
+        alertMessage = "...............まだやるの...?";
+    }else if(countReload === 14) {
+        alertMessage = "............";
+    }else if(countReload === 19) {
+        alertMessage = "...............そろそろ諦めたら...?";
+    }else if(countReload === 20) {
+        alertMessage = "............";
+    }else if(countReload === 50) {
+        alertMessage = "............あと50回";
+    }else if(countReload === 51) {
+        alertMessage = "............";
+    }else if(countReload === 70) {
+        alertMessage = "............あと30回";
+    }else if(countReload === 71) {
+        alertMessage = "............";
+    }else if(countReload === 90) {
+        alertMessage = "............あと10回";
+    }else if(countReload === 91) {
+        alertMessage = "............";
+    }else if(countReload === 95) {
+        alertMessage = "............あと5回";
+    }else if(countReload === 96) {
+        alertMessage = "............";
+    }else if(countReload === 97) {
+        alertMessage = "............あと3回";
+    }else if(countReload === 98) {
+        alertMessage = "............あと2回";
+    }else if(countReload === 99) {
+        alertMessage = "............あと1回";
+    }else if(countReload === 100) {
+        alertMessage = "............100回達成したよ！おめでとう！！";
+    }else if(countReload === 101) {
+        alertMessage = "............";
+    }else if(countReload === 150) {
+        alertMessage = "............150回";
+    }else if(countReload === 151) {
+        alertMessage = "............";
+    }else if(countReload === 200) {
+        alertMessage = "............200回";
+    }else if(countReload === 201) {
+        alertMessage = "............";
+    }
+    if (countReload >= 210){
+        if(countClickStartButton >= 100) {
+            alertMessage = "796251384";
+        }else{
+            alertMessage = "............スタートボタンを100回押してみたら？";
+        }
+    }
+    alert(alertMessage);
+    countReload++;
+});
+
 function delay(n){
     return new Promise(function(resolve){
         setTimeout(resolve,n*100);
