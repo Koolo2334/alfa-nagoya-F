@@ -1,8 +1,10 @@
-let countClickStartButton = 0, d = document;
-let _checkchar_value = {};
 let isFocused = false;
 let isClearQuiz1 = false;
 let isClearQuiz2 = false;
+let countClickStartButton = 0, d = document;
+let countReload = 0;
+let _checkchar_value = {};
+let alertMessage = "";
 
 for(let i = 0; i < 6; i++) {
     window.history.pushState(null, null, null)
