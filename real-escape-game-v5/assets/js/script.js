@@ -146,7 +146,8 @@ $('#section--first__input input').on('input', async function(){
             $('#section--first__input div').css('background-color','#1d0836');
             await delay(1.5);
             $('#section--first__input div').css('background-color','#b39b30');
-            $('#btn-start').text('Go Deeper...');
+            d.querySelector('#btn-start').style.opacity = 1;
+            d.querySelector('#btn-start').setAttribute('onclick', 'godeeper();');
         }else{
             $('#section--first__input input').css('background-color','#741218');
             await delay(2);
