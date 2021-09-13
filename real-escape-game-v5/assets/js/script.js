@@ -55,7 +55,9 @@ $('#btn-start').on('click', async function() {
         $('#section--first__row .card__title').text('Hint');
         $('#section--first__row .card__content').text('');
         $('#section--first__title').text('M E L U O W E');
-        $('#btn-start').text('Look Back...');
+        $('#btn-start').text('Go Deeper...');
+        d.querySelector('#btn-start').style.opacity = 0;
+        d.querySelector('.main_img').src = "assets/images/top-image_another.png";
         let str = [];
         $('#blackscreen__statement > span').each(function(i){
             $(this).css('opacity','1');
@@ -125,6 +127,7 @@ $('#section--first__input input').on('input', async function(){
             $('#section--first__input div').css('background-color','#1d0836');
             await delay(1.5);
             $('#section--first__input div').css('background-color','#b39b30');
+            $('#btn-start').text('Go Deeper...');
         }else{
             $('#section--first__input input').css('background-color','#741218');
             await delay(2);
