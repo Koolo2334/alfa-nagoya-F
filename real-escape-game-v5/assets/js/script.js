@@ -129,7 +129,7 @@ $('.section__input input:not(input:first-child)').focus(function() {
 
 $('#section--first__input input').on('input', async function(){
     let value = "";
-    check_chartype($(this));
+    check_chartype($(this),'ABC');
     for(let i = 0; i <= $('#section--first__input input').length - 1; i++) {
         value += $('#section--first__input input').eq(i).val();
     }
