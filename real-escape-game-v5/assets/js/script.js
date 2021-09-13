@@ -1,8 +1,9 @@
-let isFocused = false;
-let isClearQuiz1 = false;
-let isClearQuiz2 = false;
-let countClickStartButton = 0, d = document;
-let _checkchar_value = {};
+let isFocused = false,
+    isClearQuiz1 = false,
+    isClearQuiz2 = false,
+    countClickStartButton = 0,
+    d = document,
+    _checkchar_value = {};
 
 function delay(n){
     return new Promise(function(resolve){
