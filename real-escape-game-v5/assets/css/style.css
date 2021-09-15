@@ -232,7 +232,7 @@ button {
   }
 }
 
-#section--first__arrow{
+#section__arrow{
   display: none;
   position: relative;
   width: 30px;
@@ -240,7 +240,7 @@ button {
   margin: -20px auto 45px auto;
 }
 
-#section--first__arrow::after{
+#section__arrow::after{
   content: "";
   position: absolute;
   right: 0;
@@ -254,7 +254,11 @@ button {
   border-width: 15px 15px 0 15px;
 }
 
-#section--first__input {
+#section--second__arrow::after{
+  border-color: #2b1842 transparent transparent transparent;
+}
+
+#section__input {
   display: none;
   margin: 0 auto 10px auto;
   justify-content: center;
@@ -263,7 +267,7 @@ button {
   height: 50px;
 }
 
-#section--first__input input {
+#section__input input {
   color: #c5c5c5;
   background-color: #1d0836;
   text-align: center;
@@ -274,7 +278,7 @@ button {
   padding: 0;
 }
 
-#section--first__input div {
+#section__input div {
   color: #1d0836;
   background-color: #b39b30;
   text-align: center;
@@ -427,7 +431,7 @@ button {
   color: #c5c5c5;
 }
 
-.quiz2 p, .quiz2 h1 {
+.quiz2 .section--second__title h2, .quiz2 .section--second__text, .quiz2 .card__title, .quiz2 .card__content {
   display: none;
 }
 
