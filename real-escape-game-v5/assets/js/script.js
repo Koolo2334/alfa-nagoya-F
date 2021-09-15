@@ -142,7 +142,7 @@ document.addEventListener('touchmove', disableScroll, { passive: false });
 document.addEventListener('mousewheel', disableScroll, { passive: false });
 
 $('#first-screen').on('click', function() {
-   for(let i = 0; i < 2; i++) {
+   for(let i = 0; i < 5; i++) {
        window.history.pushState(null, null, null)
    }
    $(this).css('display', 'none');
