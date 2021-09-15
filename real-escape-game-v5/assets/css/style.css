@@ -469,7 +469,7 @@ button {
 }
 
 .quiz2 .quiz2--hint__text {
-  display: none;
+  display: inline;
 }
 
 .quiz2 .quiz2__img {
