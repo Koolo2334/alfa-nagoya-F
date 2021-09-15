@@ -135,14 +135,14 @@ function check_chartype(obj, type){
 document.addEventListener('touchmove', disableScroll, { passive: false });
 document.addEventListener('mousewheel', disableScroll, { passive: false });
 
-$('#first-screen').on('click', function() {
-   for(let i = 0; i < 5; i++) {
-       window.history.pushState(null, null, null)
-   }
-   $(this).css('display', 'none');
-   document.removeEventListener('touchmove', disableScroll, { passive: false });
-   document.removeEventListener('mousewheel', disableScroll, { passive: false });
-});
+// $('#first-screen').on('click', function() {
+//    for(let i = 0; i < 5; i++) {
+//        window.history.pushState(null, null, null)
+//    }
+//    $(this).css('display', 'none');
+//    document.removeEventListener('touchmove', disableScroll, { passive: false });
+//    document.removeEventListener('mousewheel', disableScroll, { passive: false });
+// });
 
 
 $('#btn-start').on('click', async function() {
