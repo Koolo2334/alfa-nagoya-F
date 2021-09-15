@@ -303,7 +303,7 @@ $('#section--second__input input').on('input', async function(){
 $('#section--second__input input').keydown(function() {
     let value = "";
     for(let i = 0; i <= $('#section--second__input input').length - 1; i++) {
-        value += $('#section--first__second input').eq(i).val();
+        value += $('#section--second__input input').eq(i).val();
     }
     if(value.length <= 1) {
         $('#section--second__input input').eq(0).attr('placeholder','A');
