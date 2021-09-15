@@ -164,6 +164,8 @@
         window.history.pushState(null, null, null)
       }
       $('#first-screen').css('display', 'none');
+      document.removeEventListener('touchmove', disableScroll, { passive: false });
+      document.removeEventListener('mousewheel', disableScroll, { passive: false });
     };
   </script>
 </body>
