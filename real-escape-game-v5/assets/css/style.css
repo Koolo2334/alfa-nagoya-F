@@ -254,6 +254,10 @@ button {
   border-width: 15px 15px 0 15px;
 }
 
+.quiz2--hint__arrow {
+  margin-bottom: 10px;
+}
+
 #section--second__arrow::after{
   border-color: #2b1842 transparent transparent transparent;
 }
@@ -446,8 +450,7 @@ button {
 .quiz2--hint__text {
   color: #7A5078;
   display: none;
-  font-size: 26px;
-  margin-top: -20px;
+  font-size: 30px;
 }
 
 .quiz2__img {
