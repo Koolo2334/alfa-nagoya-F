@@ -431,6 +431,11 @@ button {
   display: none;
 }
 
+#quiz2__img--main {
+  width: 32%;
+  max-width: 346.67px;
+}
+
 .box {
   padding: 35px 30px;
 }
