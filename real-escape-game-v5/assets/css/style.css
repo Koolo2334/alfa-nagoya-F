@@ -431,6 +431,10 @@ button {
   color: #c5c5c5;
 }
 
+#quiz2__img {
+  diaplay: none;
+}
+
 .quiz2 #section--second__title--text, .quiz2 #section--second__text, .quiz2 .card__title, .quiz2 .card__content {
   display: none;
 }
@@ -440,6 +444,14 @@ button {
 }
 
 .quiz2 .section__arrow {
+  display: block;
+}
+
+.quiz2 #quiz2__img {
+  diaplay: inline;
+}
+
+.quiz2 #section--second__input {
   display: block;
 }
 
