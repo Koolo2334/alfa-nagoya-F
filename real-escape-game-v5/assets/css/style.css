@@ -433,10 +433,15 @@ button {
 
 .quiz2--hint__text {
   color: #7A5078;
+  display: none;
 }
 
-#quiz2__img {
+.quiz2__img {
   diaplay: none;
+}
+
+#quiz2__img--main {
+  width: 40%;
 }
 
 .quiz2 #section--second__title--text, .quiz2 #section--second__text, .quiz2 .card__title, .quiz2 .card__content {
@@ -451,16 +456,16 @@ button {
   display: block;
 }
 
+.quiz2 .quiz2--hint__text {
+  display: none;
+}
+
 .quiz2 #quiz2__img {
   diaplay: inline;
 }
 
 .quiz2 #section--second__input {
   display: block;
-}
-
-#quiz2__img--main {
-  width: 40%;
 }
 
 .box {
