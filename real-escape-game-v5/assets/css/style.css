@@ -436,9 +436,6 @@ button {
 }
 
 .quiz2 .card {
-/*   display: flex;
-  justify-content: center;
-  align-items: center; */
   text-align: center;
 }
 
@@ -447,8 +444,8 @@ button {
 }
 
 #quiz2__img--main {
-  width: 32%;
-  max-width: 415px;
+  width: 40%;
+  margin-top: -33px;
 }
 
 .box {
