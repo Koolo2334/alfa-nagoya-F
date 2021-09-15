@@ -69,7 +69,7 @@
       <div class="container" id="section--first">
         <h2 class="section-title" id="section--first__title">ゲーム開始前の準備</h2>
         <p class="font-eng text-center" id="section--first__text">Are you ready for game?</p>
-        <div id="section--first__arrow"></div>
+        <div class="section__arrow" id="section--first__arrow"></div>
         <div class="section__input" id="section--first__input">
           <input id="section--first__input--1" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='A' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
           <input id="section--first__input--2" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='N' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
@@ -112,12 +112,21 @@
       </div>
     </section>
     <section class="section bg-color--keycolor">
-      <div class="container">
-        <div class="section-title">
-          <h1>複数人での遊び方</h1>
+      <div class="container" id="section--second">
+        <div class="section-title" id="section--second__title">
+          <h2>複数人での遊び方</h2>
           <img class="quiz2__img" id="quiz2__img--main" src="assets/images/quiz2-img.png" alt="quiz2">
         </div>
-        <p class="font-eng text-center">Playing games with multiple players</p>
+        <p class="font-eng text-center" id="section--second__text">Playing games with multiple players</p>
+        <div class="section__arrow" id="section--second__arrow"></div>
+        <div class="section__input" id="section--second__input">
+          <input id="section--second__input--1" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='A' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+          <input id="section--second__input--2" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='N' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+          <input id="section--second__input--3" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='S' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+          <input id="section--second__input--4" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='W' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+          <input id="section--second__input--5" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='E' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+          <input id="section--second__input--6" type="text" maxlength='1' pattern="^[A-Za-z]+$" autocomplete="off" placeholder='R' oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+        </div>
         <div class="row">
           <div class="column">
             <div class="card">
@@ -125,7 +134,9 @@
               <p class="card__content">例：Zoom、LINE通話など<br>
                 カメラはオフにしたままでも参加は可能です。<br>
                 ただ、離れたところにいる仲間と同じ会場で謎解きをしている気持ちになれるので、カメラをオンにしてみんなでわいわいプレイをすることをお勧めします。</p>
-              <img class="quiz2__img" id="quiz2__img--hint1" src="assets/images/quiz2-hint1-img.png" alt="quiz2-hint1">
+              <img class="quiz2__img" id="quiz2--hint1__img" src="assets/images/quiz2-hint1-img.png" alt="quiz2-hint1">
+              <div class="section__arrow" id="quiz2--hint1__arrow"></div>
+              <p class="quiz2--hint__text">LEAVE</p>
             </div>
           </div>
           <div class="column">
@@ -134,7 +145,9 @@
               <p class="card__content">本ゲームでは、登場人物が会話する動画を見ながら謎解きをします。<br>
                 動画を見るときにイヤホンを使うと、動画の再生中も仲間と会話をしながらプレイができます。<br>
                 ※イヤホンを使用しない場合は、音声をマイクが拾ってしまわないように、動画の再生中は通話ツールのミュート機能をご利用ください。</p>
-              <img class="quiz2__img" id="quiz2__img--hint2" src="assets/images/quiz2-hint2-img.png" alt="quiz2-hint2">
+              <img class="quiz2__img" id="quiz2--hint2__img" src="assets/images/quiz2-hint2-img.png" alt="quiz2-hint2">
+              <div class="section__arrow" id="quiz2--hint2__arrow"></div>
+              <p class="quiz2--hint__text">THIS</p>
             </div>
           </div>
           <div class="column">
@@ -142,7 +155,9 @@
               <h3 class="card__title">情報共有はしっかりと！</h3>
               <p class="card__content">遠くにいる仲間と足並みを揃えて遊びましょう。<br>
                 動画で気になったところ、解けた謎の答えや思いついたことはなんでも共有しましょう！</p>
-              <img class="quiz2__img" id="quiz2__img--hint3" src="assets/images/quiz2-hint3-img.png" alt="quiz2-hint3">
+              <img class="quiz2__img" id="quiz2--hint3__img" src="assets/images/quiz2-hint3-img.png" alt="quiz2-hint3">
+              <div class="section__arrow" id="quiz2--hint3__arrow"></div>
+              <p class="quiz2--hint__text">PAGE</p>
             </div>
           </div>
         </div>
