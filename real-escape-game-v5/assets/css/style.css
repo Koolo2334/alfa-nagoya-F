@@ -431,8 +431,15 @@ button {
   color: #c5c5c5;
 }
 
-.quiz2 .section--second__title h2, .quiz2 .section--second__text, .quiz2 .card__title, .quiz2 .card__content {
+.quiz2 #section--second__title--text, .quiz2 .section--second__text, .quiz2 .card__title, .quiz2 .card__content {
   display: none;
+}
+
+.quiz2 .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #quiz2__img--main {
