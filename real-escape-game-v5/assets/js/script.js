@@ -280,7 +280,7 @@ $('#section--second__input input').on('input', async function(){
     }
     if(value.length === 6) {
         if(value == "GOBACK") {
-            $('#section--second__input').html('<div>W</div><div>E</div><div>L</div><div>C</div><div>O</div><div>M</div><div>E</div>');
+            $('#section--second__input').html('<div>G</div><div>O</div><div>B</div><div>A</div><div>C</div><div>K</div>');
             $('#section--second').addClass('quiz1--clear');
             isClearQuiz1 = true;
             $('#section--third').addClass('quiz2');
