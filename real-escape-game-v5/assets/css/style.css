@@ -302,6 +302,10 @@ button {
   margin: 0 auto;
 }
 
+#section--second__input div {
+  width: 14%;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
