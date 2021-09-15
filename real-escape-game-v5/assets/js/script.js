@@ -269,9 +269,51 @@ $('#section--first__input input').keydown(function() {
     }
 });
 
-function godeeper() {
-    
-}
+$('#section--second__input input').on('input', async function(){
+    let value = "";
+    check_chartype($(this),'ABC');
+    for(let i = 0; i <= $('#section--second__input input').length - 1; i++) {
+        value += $('#section--second__input input').eq(i).val();
+    }
+    if(value.length >= 1) {
+        $('#section--second__input input').attr('placeholder','');
+    }
+    if(value.length === 6) {
+        if(value == "GOBACK") {
+            $('#section--second__input').html('<div>W</div><div>E</div><div>L</div><div>C</div><div>O</div><div>M</div><div>E</div>');
+            $('#section--second').addClass('quiz1--clear');
+            isClearQuiz1 = true;
+            $('#section--third').addClass('quiz2');
+            await delay(2);
+            $('#section--second__input div').css('background-color','#1d0836');
+            await delay(1.5);
+            $('#section--second__input div').css('background-color','#b39b30');
+        }else{
+            $('#section--second__input input').css('background-color','#741218');
+            await delay(2);
+            $('#section--second__input input').css('background-color','#1d0836');
+            await delay(2);
+            $('#section--second__input input').css('background-color','#741218');
+            await delay(3);
+            $('#section--second__input input').css('background-color','#1d0836');
+        }
+    }
+});
+
+$('#section--second__input input').keydown(function() {
+    let value = "";
+    for(let i = 0; i <= $('#section--second__input input').length - 1; i++) {
+        value += $('#section--first__second input').eq(i).val();
+    }
+    if(value.length <= 1) {
+        $('#section--second__input input').eq(0).attr('placeholder','A');
+        $('#section--second__input input').eq(1).attr('placeholder','N');
+        $('#section--second__input input').eq(2).attr('placeholder','S');
+        $('#section--second__input input').eq(3).attr('placeholder','W');
+        $('#section--second__input input').eq(4).attr('placeholder','E');
+        $('#section--second__input input').eq(5).attr('placeholder','R');
+    }
+});
 
 // window.onunload = function(){
 //     window.location.href = './real-escape-game-v5/';
