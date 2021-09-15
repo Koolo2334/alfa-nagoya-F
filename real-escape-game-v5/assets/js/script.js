@@ -7,6 +7,11 @@ let isFocused = false,
     _checkchar_value = {},
     alertMessage = "";
 
+window.addEventListener('beforeunload', function(e) {
+    e.preventDefault();
+    e.returnValue = '';
+});
+
 window.addEventListener('popstate', function(event) {
     window.history.pushState(null, null, null)
     if(countReload === 0) {
@@ -267,6 +272,6 @@ function godeeper() {
     
 }
 
-window.onunload = function(){
-    window.location.href = './real-escape-game-v5/';
-}
+// window.onunload = function(){
+//     window.location.href = './real-escape-game-v5/';
+// }
