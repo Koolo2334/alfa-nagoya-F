@@ -267,6 +267,10 @@ button {
   height: 50px;
 }
 
+#section--second__input {
+  width: 280px;
+}
+
 .section__input input {
   color: #c5c5c5;
   background-color: #1d0836;
@@ -465,7 +469,7 @@ button {
 }
 
 .quiz2 .quiz2__img {
-  diaplay: inline;
+  display: inline;
 }
 
 .quiz2 #section--second__input {
