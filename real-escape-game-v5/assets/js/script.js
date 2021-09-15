@@ -13,7 +13,8 @@ window.addEventListener('beforeunload', function(e) {
 });
 
 window.addEventListener('popstate', function(event) {
-    window.history.pushState(null, null, null)
+//     window.history.pushState(null, null, null)
+    history.forward()
     if(countReload === 0) {
         alertMessage = "...";
     }else if(countReload === 1) {
@@ -140,14 +141,14 @@ function check_chartype(obj, type){
 document.addEventListener('touchmove', disableScroll, { passive: false });
 document.addEventListener('mousewheel', disableScroll, { passive: false });
 
-// $('#first-screen').on('click', function() {
+$('#first-screen').on('click', function() {
 //    for(let i = 0; i < 5; i++) {
-//        window.history.pushState(null, null, null)
+   window.history.pushState(null, null, null)
 //    }
-//    $(this).css('display', 'none');
-//    document.removeEventListener('touchmove', disableScroll, { passive: false });
-//    document.removeEventListener('mousewheel', disableScroll, { passive: false });
-// });
+   $(this).css('display', 'none');
+   document.removeEventListener('touchmove', disableScroll, { passive: false });
+   document.removeEventListener('mousewheel', disableScroll, { passive: false });
+});
 
 
 $('#btn-start').on('click', async function() {
