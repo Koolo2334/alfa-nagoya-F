@@ -427,6 +427,10 @@ button {
   color: #c5c5c5;
 }
 
+.quiz2 p, .quiz2 h1 {
+  display: none;
+}
+
 .box {
   padding: 35px 30px;
 }
