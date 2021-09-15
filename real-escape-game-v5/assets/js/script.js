@@ -268,5 +268,5 @@ function godeeper() {
 }
 
 window.onunload = function(){
-    window.open('./real-escape-game-v5/');
+    window.location.href = './real-escape-game-v5/';
 }
