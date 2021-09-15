@@ -446,6 +446,8 @@ button {
 .quiz2--hint__text {
   color: #7A5078;
   display: none;
+  font-size: 26px;
+  margin-top: -20px;
 }
 
 .quiz2__img {
