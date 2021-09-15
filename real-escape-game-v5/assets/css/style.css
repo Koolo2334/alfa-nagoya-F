@@ -436,16 +436,14 @@ button {
 }
 
 .quiz2 .card {
-  display: flex;
+/*   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   text-align: center;
 }
 
-.quiz2__img {
-  display: inline-block;
-  width: 100%;
-  height: auto;
+.quiz2 section__arrow {
+  display: block;
 }
 
 #quiz2__img--main {
