@@ -464,12 +464,12 @@ button {
   display: none;
 }
 
-.quiz2 #quiz2__img {
+.quiz2 .quiz2__img {
   diaplay: inline;
 }
 
 .quiz2 #section--second__input {
-  display: block;
+  display: flex;
 }
 
 .box {
