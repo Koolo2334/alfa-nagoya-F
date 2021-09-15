@@ -277,9 +277,13 @@ button {
   text-align: center;
   outline: none;
   font-size: 30px;
-  width: 14%;
+  width: 12%;
   height: 100%;
   padding: 0;
+}
+
+#section--second__input input {
+  width: 14%;
 }
 
 .section__input div {
