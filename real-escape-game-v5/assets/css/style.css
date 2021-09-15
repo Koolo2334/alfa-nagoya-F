@@ -431,6 +431,10 @@ button {
   color: #c5c5c5;
 }
 
+.quiz2--hint__text {
+  color: #7A5078;
+}
+
 #quiz2__img {
   diaplay: none;
 }
