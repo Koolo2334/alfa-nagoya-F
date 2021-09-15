@@ -8,7 +8,8 @@ let isFocused = false,
     alertMessage = "";
 
 window.addEventListener('beforeunload', function(e) {
-    history.back();
+    window.history.pushState(null, null, null);
+    window.history.back();
     e.preventDefault();
     e.returnValue = '';
 });
