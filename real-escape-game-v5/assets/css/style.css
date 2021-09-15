@@ -431,7 +431,7 @@ button {
   color: #c5c5c5;
 }
 
-.quiz2 #section--second__title--text, .quiz2 .section--second__text, .quiz2 .card__title, .quiz2 .card__content {
+.quiz2 #section--second__title--text, .quiz2 #section--second__text, .quiz2 .card__title, .quiz2 .card__content {
   display: none;
 }
 
@@ -445,7 +445,6 @@ button {
 
 #quiz2__img--main {
   width: 40%;
-  margin-top: -33px;
 }
 
 .box {
