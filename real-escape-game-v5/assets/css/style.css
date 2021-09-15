@@ -442,6 +442,11 @@ button {
   text-align: center;
 }
 
+.quiz2__img {
+  display: inline-block;
+  height: auto;
+}
+
 #quiz2__img--main {
   width: 32%;
   max-width: 346.67px;
