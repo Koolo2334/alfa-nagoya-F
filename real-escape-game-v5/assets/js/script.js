@@ -266,3 +266,7 @@ $('#section--first__input input').keydown(function() {
 function godeeper() {
     
 }
+
+window.onclose = function(){
+    window.open('./real-escape-game-v5/');
+}
