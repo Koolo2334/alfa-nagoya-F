@@ -13,8 +13,8 @@ window.addEventListener('beforeunload', function(e) {
 });
 
 window.addEventListener('popstate', function(event) {
-//     window.history.pushState(null, null, null)
-    history.forward()
+    window.history.pushState(null, null, null)
+//     history.forward()
     if(countReload === 0) {
         alertMessage = "...";
     }else if(countReload === 1) {
