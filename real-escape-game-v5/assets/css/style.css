@@ -232,7 +232,7 @@ button {
   }
 }
 
-#section__arrow{
+.section__arrow{
   display: none;
   position: relative;
   width: 30px;
@@ -240,7 +240,7 @@ button {
   margin: -20px auto 45px auto;
 }
 
-#section__arrow::after{
+.section__arrow::after{
   content: "";
   position: absolute;
   right: 0;
@@ -258,7 +258,7 @@ button {
   border-color: #2b1842 transparent transparent transparent;
 }
 
-#section__input {
+.section__input {
   display: none;
   margin: 0 auto 10px auto;
   justify-content: center;
@@ -267,7 +267,7 @@ button {
   height: 50px;
 }
 
-#section__input input {
+.section__input input {
   color: #c5c5c5;
   background-color: #1d0836;
   text-align: center;
@@ -278,7 +278,7 @@ button {
   padding: 0;
 }
 
-#section__input div {
+.section__input div {
   color: #1d0836;
   background-color: #b39b30;
   text-align: center;
