@@ -167,8 +167,6 @@ $('#btn-start').on('click', async function() {
         d.querySelector('.header__logo').querySelector('img').src = "assets/images/logoafter.png";
         $('body').addClass('black-thema');
         $('#section--first').addClass('quiz1');
-        $('#section--first__row .card__title').text('Hint');
-        $('#section--first__row .card__content').text('');
         $('#section--first__title').text('M E L U O W E');
         $('#btn-start').text('Look Back...');
         d.querySelector('.main_img').src = "assets/images/top-image_another.png";
