@@ -431,7 +431,7 @@ button {
   color: #c5c5c5;
 }
 
-.quiz1 .column:first-child,.quiz1 .column:last-child {
+.quiz1 .column:first-child, .quiz1 .column:last-child, .quiz1 .card__title, .quiz1 .card__content {
   display: none;
 }
 
