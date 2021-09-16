@@ -332,9 +332,9 @@ button {
 
 .sub-hint--title--symbol {
   width: 20px;
-  float: right;
   margin-top: -35px;
   margin-right: 4px;
+  margin-left: auto;
 }
 
 .sub-hint--title--symbol::before, .sub-hint--title--symbol::after {
