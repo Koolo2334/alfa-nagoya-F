@@ -367,6 +367,10 @@ button {
   text-align: center;
 }
 
+.sub-hint--content a {
+  margin: 0;
+}
+
 .open .sub-hint--content {
   display: block;
 }
