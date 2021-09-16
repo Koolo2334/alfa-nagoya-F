@@ -344,6 +344,7 @@ button {
 
 .card__quiz1-img {
   display: none;
+  margin-top: 8px;
 }
 
 .card__content {
