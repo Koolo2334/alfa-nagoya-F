@@ -312,6 +312,7 @@ button {
   padding: 9px 20px;
   background-color: #2b1842;
   justify-content: space-around;
+  margin-top: 25px;
 }
 
 .sub-hint {
