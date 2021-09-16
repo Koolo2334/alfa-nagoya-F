@@ -237,12 +237,12 @@ $('.section__input input:not(input:first-child)').focus(function() {
 });
 
 $('.show .sub-hint--title').on('click', function() {
-    if($(this).parent.hasClass('open')) {
-        $(this).parent.removeClass('open');
+    if($(this).parent().hasClass('open')) {
+        $(this).parent().removeClass('open');
     }else{
-        $(this).parent.addClass('open');
+        $(this).parent().addClass('open');
     }
-})
+});
 
 $('#section--first__input input').on('input', async function(){
     let value = "";
