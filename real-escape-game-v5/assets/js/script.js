@@ -138,7 +138,7 @@ function check_chartype(obj, type){
     }
 }
 
-function quiz1() {
+async function quiz1() {
     $('#section--first').addClass('quiz1');
     $('#section--first__title').text('M E L U O W E');
     $('#btn-start').text('Look Back...');
@@ -146,7 +146,7 @@ function quiz1() {
     $('#quiz1__sub-hint1').addClass('show')
 }
 
-function quiz2() {
+async function quiz2() {
     $('#section--second').addClass('quiz2');
     await delay(200);
     $('#quiz2__sub-hint1').addClass('show')
@@ -184,7 +184,7 @@ $('#btn-start').on('click', async function() {
         //ブラックアウト後処理
         d.querySelector('.header__logo').querySelector('img').src = "assets/images/logoafter.png";
         $('body').addClass('black-thema');
-        async quiz1();
+        await quiz1();
         d.querySelector('.main_img').src = "assets/images/top-image_another.png";
         let str = [];
         $('#blackscreen__statement > span').each(function(i){
@@ -258,7 +258,7 @@ $('#section--first__input input').on('input', async function(){
             $('#section--first__input').html('<div>W</div><div>E</div><div>L</div><div>C</div><div>O</div><div>M</div><div>E</div>');
             $('#section--first').addClass('quiz1--clear');
             isClearQuiz1 = true;
-            async quiz2();
+            await quiz2();
             await delay(2);
             $('#section--first__input div').css('background-color','#1d0836');
             await delay(1.5);
