@@ -237,10 +237,10 @@ $('.section__input input:not(input:first-child)').focus(function() {
 });
 
 $('.show .sub-hint--title').on('click', function() {
-    if($(this).hasClass('open')) {
-        $(this).removeClass('open');
+    if($(this).parent.hasClass('open')) {
+        $(this).parent.removeClass('open');
     }else{
-        $(this).addClass('open');
+        $(this).parent.addClass('open');
     }
 })
 
