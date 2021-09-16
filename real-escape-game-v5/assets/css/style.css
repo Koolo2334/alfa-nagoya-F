@@ -354,7 +354,7 @@ button {
   margin-top: -4px;
 }
 
-.show .sub-hint {
+.show.sub-hint {
   opacity: 1;
 }
 
