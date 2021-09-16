@@ -353,6 +353,7 @@ button {
 
 .sub-hint--title--symbol::after {
   transform: rotate(90deg);
+  margin-top: -3px;
 }
 
 .open .sub-hint--title--symbol::before {
