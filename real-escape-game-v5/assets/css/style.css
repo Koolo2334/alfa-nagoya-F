@@ -306,6 +306,66 @@ button {
   width: 14%;
 }
 
+.sub-hint-wrap {
+  display: flex;
+  line-height: 1.75;
+  padding: 9px 20px;
+  background-color: #2b1842;
+  justify-content: space-between;
+}
+
+.sub-hint {
+  width: 30%;
+}
+
+.sub-hint--title {
+  width: 100%;
+  height: 40px;
+  background-color: #1d0836;
+}
+
+.sub-hint--title--text {
+  color: #c6c6c6;
+  font-size: 30px;
+  text-align: center;
+}
+
+.sub-hint--title--symbol {
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+
+.sub-hint--title--symbol::before, .sub-hint--title--symbol::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 6px;
+  background: #c6c6c6;
+}
+
+.sub-hint--title--symbol::after {
+  transform: rotate(90deg);
+}
+
+.open .sub-hint--title--symbol::before {
+  transform: rotate(-45deg);
+}
+
+.open .sub-hint--title--symbol::after {
+  transform: rotate(45deg);
+}
+
+.sub-hint--content {
+  display: none;
+  background-color: #7A5078;
+  color: #c6c6c6;
+}
+
+.open .sub-hint--content {
+  display: inline;
+}
+  
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,7 +598,7 @@ button {
 }
 
 .black-thema .bg-color--gray {
-  background-color: #2b1842
+  background-color: #2b1842;
 }
 
 /*********************
