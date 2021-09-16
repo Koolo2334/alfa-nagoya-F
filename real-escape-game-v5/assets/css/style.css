@@ -307,7 +307,7 @@ button {
 }
 
 .sub-hint-wrap {
-  display: flex;
+  display: none;
   line-height: 1.75;
   padding: 9px 20px;
   background-color: #2b1842;
@@ -317,6 +317,7 @@ button {
 
 .sub-hint {
   width: 30%;
+  opacity: 0.2;
 }
 
 .sub-hint--title {
@@ -351,6 +352,14 @@ button {
 .sub-hint--title--symbol::after {
   transform: rotate(90deg);
   margin-top: -4px;
+}
+
+.show .sub-hint {
+  opacity: 1;
+}
+
+.show .sub-hint--title {
+  cursor: pointer;
 }
 
 .open .sub-hint--title--symbol::before {
@@ -484,6 +493,10 @@ button {
   color: #777777d7;
 }
 
+.quiz1 #quiz1__sub-hint-wrap {
+  display: flex;
+}
+
 .quiz1 #section--first__arrow {
   display: block;
 }
@@ -521,6 +534,10 @@ button {
 
 #section--second__title--text {
   font-size: 24px;
+}
+
+.quiz2 #quiz2__sub-hint-wrap {
+  display: flex;
 }
 
 .quiz2--hint__text {
