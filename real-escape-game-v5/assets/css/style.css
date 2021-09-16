@@ -320,19 +320,19 @@ button {
 
 .sub-hint--title {
   width: 100%;
-  height: 40px;
+  height: 28px;
   background-color: #1d0836;
 }
 
 .sub-hint--title--text {
   color: #c6c6c6;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
 }
 
 .sub-hint--title--symbol {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   float: right;
 }
 
