@@ -328,6 +328,7 @@ button {
   color: #c6c6c6;
   font-size: 17px;
   text-align: center;
+  display: inline;
 }
 
 .sub-hint--title--symbol {
@@ -367,7 +368,7 @@ button {
 }
 
 .sub-hint--content p {
-  margin: 0;
+  display: inline;
 }
 
 .open .sub-hint--content {
