@@ -236,10 +236,13 @@ $('.section__input input:not(input:first-child)').focus(function() {
     }
 });
 
-$('.show .sub-hint--title').on('click', function() {
+$(document).on('click',　'.show .sub-hint--title', function() {
+    console.log("1");
     if($(this).parent().hasClass('open')) {
+        console.log("2");
         $(this).parent().removeClass('open');
     }else{
+        console.log("3");
         $(this).parent().addClass('open');
     }
 });
