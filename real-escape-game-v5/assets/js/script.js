@@ -138,6 +138,24 @@ function check_chartype(obj, type){
     }
 }
 
+function async quiz1() {
+    $('#section--first').addClass('quiz1');
+    $('#section--first__title').text('M E L U O W E');
+    $('#btn-start').text('Look Back...');
+    await delay(200);
+    $('#quiz1__sub-hint1').addClass('show')
+}
+
+function async quiz2() {
+    $('#section--second').addClass('quiz2');
+    await delay(200);
+    $('#quiz2__sub-hint1').addClass('show')
+    await delay(200);
+    $('#quiz2__sub-hint2').addClass('show')
+    await delay(200);
+    $('#quiz2__sub-hint3').addClass('show')
+}
+
 document.addEventListener('touchmove', disableScroll, { passive: false });
 document.addEventListener('mousewheel', disableScroll, { passive: false });
 
@@ -166,9 +184,7 @@ $('#btn-start').on('click', async function() {
         //ブラックアウト後処理
         d.querySelector('.header__logo').querySelector('img').src = "assets/images/logoafter.png";
         $('body').addClass('black-thema');
-        $('#section--first').addClass('quiz1');
-        $('#section--first__title').text('M E L U O W E');
-        $('#btn-start').text('Look Back...');
+        quiz1();
         d.querySelector('.main_img').src = "assets/images/top-image_another.png";
         let str = [];
         $('#blackscreen__statement > span').each(function(i){
@@ -220,6 +236,14 @@ $('.section__input input:not(input:first-child)').focus(function() {
     }
 });
 
+$('.show .sub-hint--title').on('click', function() {
+    if($(this).hasClass('open')) {
+        $(this).removeClass('open');
+    }else{
+        $(this).addClass('open');
+    }
+})
+
 $('#section--first__input input').on('input', async function(){
     let value = "";
     check_chartype($(this),'ABC');
@@ -234,7 +258,7 @@ $('#section--first__input input').on('input', async function(){
             $('#section--first__input').html('<div>W</div><div>E</div><div>L</div><div>C</div><div>O</div><div>M</div><div>E</div>');
             $('#section--first').addClass('quiz1--clear');
             isClearQuiz1 = true;
-            $('#section--second').addClass('quiz2');
+            quiz2();
             await delay(2);
             $('#section--first__input div').css('background-color','#1d0836');
             await delay(1.5);
