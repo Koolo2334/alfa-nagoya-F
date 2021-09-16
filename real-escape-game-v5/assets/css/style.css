@@ -326,7 +326,7 @@ button {
 
 .sub-hint--title--text {
   color: #c6c6c6;
-  font-size: 20px;
+  font-size: 17px;
   text-align: center;
 }
 
@@ -334,6 +334,8 @@ button {
   width: 20px;
   height: 20px;
   float: right;
+  margin-top: -35px;
+  margin-right: 4px;
 }
 
 .sub-hint--title--symbol::before, .sub-hint--title--symbol::after {
