@@ -400,7 +400,7 @@ button {
 }
 
 .close .sub-hint--content {
-  animation: sub-hint--content__fadeIn 300ms ease-in 0s reverse, late-close 100ms linear 300ms;
+  animation: sub-hint--content__fadeIn 300ms ease-in 0s reverse, late-close 100ms ease-in 300ms fowards;
 }
 
 @keyframes sub-hint--content__fadeIn {
