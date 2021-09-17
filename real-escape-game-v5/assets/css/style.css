@@ -380,14 +380,15 @@ button {
 }
 
 .sub-hint--content {
-  display: none;
   opacity: 0;
   background-color: #7A5078;
   color: #c6c6c6;
   text-align: center;
-  animation: 100ms linear 0s 1 normal closehint;
+  transition: .1s;
+  height: 0;
+/*   animation: 100ms linear 0s 1 normal closehint;
   transform: scaleY(0);
-  transition: transform linear 100ms 0ms, opacity linear 100ms 0ms;
+  transition: transform linear 100ms 0ms, opacity linear 100ms 0ms; */
 }
 
 .sub-hint--content p {
@@ -395,8 +396,8 @@ button {
 }
 
 .open .sub-hint--content {
-  display: block;
   opacity: 1;
+  height: auto;
   transform: scaleY(1);
 }
   
