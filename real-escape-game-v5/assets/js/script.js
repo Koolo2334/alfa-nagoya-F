@@ -158,20 +158,16 @@ async function quiz1() {
     $('#btn-start').text('Look Back...');
     await delay(200);
     $('#quiz1__sub-hint1').addClass('show')
-    $('#quiz1__sub-hint1').addClass('hidden')
 }
 
 async function quiz2() {
     $('#section--second').addClass('quiz2');
     await delay(200);
     $('#quiz2__sub-hint1').addClass('show')
-    $('#quiz2__sub-hint1').addClass('hidden')
     await delay(200);
     $('#quiz2__sub-hint2').addClass('show')
-    $('#quiz2__sub-hint2').addClass('hidden')
     await delay(200);
     $('#quiz2__sub-hint3').addClass('show')
-    $('#quiz2__sub-hint3').addClass('hidden')
 }
 
 document.addEventListener('touchmove', disableScroll, { passive: false });
@@ -267,8 +263,8 @@ $(document).on('click',　'.show .sub-hint--title', function() {
         $(this).parent().removeClass('close');
         $(this).parent().addClass('open');
     }
-    if($(this).parent().hasClass('hidden')) {
-        $(this).parent().removeClass('hidden');
+    if($(this).parent().children('.sub-hint--content').hasClass('hidden')) {
+        $(this).parent().children('.sub-hint--content').removeClass('hidden');
     }
 });
 
