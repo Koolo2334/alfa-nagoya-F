@@ -394,17 +394,17 @@ button {
 }
 
 .open .sub-hint--content {
-  display: block;
   animation: sub-hint--content__fadeIn 300ms ease-out 0s normal;
 /*   transform: scaleY(1); */
 }
 
 .close .sub-hint--content {
-  animation: sub-hint--content__fadeIn 300ms ease-in 0s reverse, late-close 100ms ease-in 300ms fowards;
+  animation: sub-hint--content__fadeOut 300ms ease-in 0s normal;
 }
 
 @keyframes sub-hint--content__fadeIn {
   0%{
+    display: block;
     opacity: 0;
     margin-top: -15px;
   }
@@ -414,8 +414,16 @@ button {
   }
 }
 
-@keyframes late-close {
-  to{display: none;}
+@keyframes sub-hint--content__fadeOut {
+  0%{
+    opacity: 1;
+    margin-top: 0px;
+  }
+  100%{
+    display: none;
+    opacity: 0;
+    margin-top: -15px;
+  }
 }
   
 .row {
