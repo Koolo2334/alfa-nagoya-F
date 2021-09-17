@@ -1,11 +1,13 @@
 let isFocused = false,
     isClearQuiz1 = false,
     isClearQuiz2 = false,
+    isValidPassword = false,
     countClickStartButton = 0,
     countReload = 0,
     d = document,
     _checkchar_value = {},
-    alertMessage = "";
+    alertMessage = "",
+    password = ("00000000" + Math.floor(Math.random() * 100000000)).slice(-8);
 
 window.addEventListener('beforeunload', function(e) {
     e.preventDefault();
@@ -78,7 +80,7 @@ window.addEventListener('popstate', function(event) {
         }
         if (countReload >= 210){
             if(countClickStartButton >= 100) {
-                alertMessage = "796251384";
+                alertMessage = String(password);
             }else{
                 alertMessage = "............スタートボタンを100回押してみたら？";
             }
@@ -208,6 +210,11 @@ $('#btn-start').on('click', async function() {
         document.removeEventListener('touchmove', disableScroll, { passive: false });
         document.removeEventListener('mousewheel', disableScroll, { passive: false });
         $('#blackscreen').css('display','none');
+    }else if(countClickStartButton >= 100 && !isClearQuiz1) {
+        if(countClickStartButton === 100) {
+            $('#btn-start').text('Enter');
+            $('section--end__input').css('display','flex');
+        }
     }
 })
 
@@ -261,6 +268,8 @@ $('#section--first__input input').on('input', async function(){
             $('#section--first__input').html('<div>W</div><div>E</div><div>L</div><div>C</div><div>O</div><div>M</div><div>E</div>');
             $('#section--first').addClass('quiz1--clear');
             isClearQuiz1 = true;
+            $('#btn-start').text('Look Back...');
+            $('#section--end__input').css('display','none');
             quiz2();
             await delay(2);
             $('#section--first__input div').css('background-color','#1d0836');
@@ -337,6 +346,40 @@ $('#section--second__input input').keydown(function() {
         $('#section--second__input input').eq(3).attr('placeholder','W');
         $('#section--second__input input').eq(4).attr('placeholder','E');
         $('#section--second__input input').eq(5).attr('placeholder','R');
+    }
+});
+
+$('#section--end__input input').on('input', async function(){
+    let value = "";
+    check_chartype($(this),'123');
+    for(let i = 0; i <= $('#section--end__input input').length - 1; i++) {
+        value += $('#section--end__input input').eq(i).val();
+    }
+    if(value.length >= 1) {
+        $('#section--end__input input').attr('placeholder','');
+    }
+    if(value == String(password)) {
+        isValidPassword = true;
+    }
+});
+
+$('#section--end__input input').keydown(function() {
+    let value = "";
+    for(let i = 0; i <= $('#section--end__input input').length - 1; i++) {
+        value += $('#section--end__input input').eq(i).val();
+    }
+    if(value !== String(password)) {
+        isValidPassword = false;
+    }
+    if(value.length <= 1) {
+        $('#section--end__input input').eq(0).attr('placeholder','P');
+        $('#section--end__input input').eq(1).attr('placeholder','A');
+        $('#section--end__input input').eq(2).attr('placeholder','S');
+        $('#section--end__input input').eq(3).attr('placeholder','S');
+        $('#section--end__input input').eq(4).attr('placeholder','W');
+        $('#section--end__input input').eq(5).attr('placeholder','O');
+        $('#section--end__input input').eq(6).attr('placeholder','R');
+        $('#section--end__input input').eq(7).attr('placeholder','D');
     }
 });
 
