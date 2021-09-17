@@ -82,7 +82,7 @@ window.addEventListener('popstate', function(event) {
             if(countClickStartButton >= 100) {
                 alertMessage = String(password);
             }else{
-                alertMessage = "............スタートボタンを100回押してみたら？";
+                alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
             }
         }
     }
