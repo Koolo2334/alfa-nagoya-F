@@ -404,9 +404,10 @@ button {
 
 @keyframes sub-hint--content__fadeIn {
   0%{
-    display: block;
+    visibility: visible;
     opacity: 0;
     margin-top: -22px;
+    height: auto;
   }
   100%{
     opacity: 1;
@@ -418,15 +419,17 @@ button {
   0%{
     opacity: 1;
     margin-top: 0px;
+    height: auto;
+  }
+  99%{
+    height: auto;
   }
   100%{
     opacity: 0;
     margin-top: -22px;
+    visibility: hidden;
+    height: 0;
   }
-}
-
-@keyframes sub-hint--content__late-close {
-  to{display: none;}
 }
   
 .row {
