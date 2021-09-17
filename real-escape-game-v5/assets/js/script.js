@@ -213,7 +213,7 @@ $('#btn-start').on('click', async function() {
     }else if(countClickStartButton >= 100 && !isClearQuiz1) {
         if(countClickStartButton === 100) {
             $('#btn-start').text('Enter');
-            $('section--end__input').css('display','flex');
+            $('#section--end__input').css('display','flex');
         }
     }
 })
