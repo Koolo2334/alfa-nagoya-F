@@ -325,6 +325,7 @@ button {
   height: 28px;
   background-color: #1d0836;
   text-align: center;
+  position: relative;
   z-index: 2;
 }
 
