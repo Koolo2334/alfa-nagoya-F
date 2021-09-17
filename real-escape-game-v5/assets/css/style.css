@@ -353,17 +353,17 @@ button {
 .sub-hint--title--symbol::after {
   transform: rotate(90deg);
   margin-top: -4px;
-  transition: transform ease-out 200ms;
+  transition: transform ease-out 250ms;
 }
 
 .sub-hint--title--symbol::before {
   transform: rotate(0deg);
-  transition: transform ease-out 200ms;
+  transition: transform ease-out 250ms;
 }
 
 .show.sub-hint {
   opacity: 1;
-  transition: opacity linear 200ms;
+  transition: opacity linear 250ms;
 }
 
 .show .sub-hint--title {
@@ -372,12 +372,12 @@ button {
 
 .open .sub-hint--title--symbol::before {
   transform: rotate(675deg);
-  transition: transform ease-out 200ms;
+  transition: transform ease-out 250ms;
 }
 
 .open .sub-hint--title--symbol::after {
   transform: rotate(405deg);
-  transition: transform ease-out 200ms;
+  transition: transform ease-out 250ms;
 }
 
 .sub-hint--content {
@@ -394,19 +394,19 @@ button {
 }
 
 .open .sub-hint--content {
-  animation: sub-hint--content__fadeIn 300ms ease-out 0s normal;
+  animation: sub-hint--content__fadeIn 250ms ease-out 0s normal;
 /*   transform: scaleY(1); */
 }
 
 .close .sub-hint--content {
-  animation: sub-hint--content__fadeOut forwards 300ms ease-in 0s normal, sub-hint--content__late-none forwards 100ms linear 300ms normal;
+  animation: sub-hint--content__fadeOut forwards 250ms ease-in 0s normal, sub-hint--content__late-none forwards 100ms linear 250ms normal;
 }
 
 @keyframes sub-hint--content__fadeIn {
   0%{
     display: block;
     opacity: 0;
-    margin-top: -15px;
+    margin-top: -22px;
   }
   100%{
     opacity: 1;
@@ -421,7 +421,7 @@ button {
   }
   100%{
     opacity: 0;
-    margin-top: -15px;
+    margin-top: -22px;
   }
 }
 
