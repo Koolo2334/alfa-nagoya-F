@@ -79,16 +79,25 @@ window.addEventListener('popstate', function(event) {
             alertMessage = "............";
         }
         if (countReload >= 210){
-            if(countClickStartButton >= 100) {
-                alertMessage = String(password);
-            }else{
-                alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
-            }
+            ifOverTwoHundredTen();
+            // if(countClickStartButton >= 100) {
+            //     alertMessage = String(password);
+            // }else{
+            //     alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
+            // }
         }
     }
     alert(alertMessage);
     countReload++;
 });
+
+function ifOverTwoHundredTen() {
+    if(countClickStartButton >= 100) {
+        alertMessage = String(password);
+    }else{
+        alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
+    }
+}
 
 function delay(n){
     return new Promise(function(resolve){
