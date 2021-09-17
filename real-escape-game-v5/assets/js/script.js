@@ -258,7 +258,9 @@ $('.section__input input:not(input:first-child)').focus(function() {
 $(document).on('click',　'.show .sub-hint--title', function() {
     if($(this).parent().hasClass('open')) {
         $(this).parent().removeClass('open');
+        $(this).parent().addClass('close');
     }else{
+        $(this).parent().removeClass('close');
         $(this).parent().addClass('open');
     }
 });
