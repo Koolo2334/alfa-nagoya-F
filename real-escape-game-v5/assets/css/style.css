@@ -394,21 +394,22 @@ button {
 }
 
 .open .sub-hint--content {
+  display: block;
   animation: sub-hint--content__fadeIn 300ms ease-out 0s normal;
 /*   transform: scaleY(1); */
 }
-.open .sub-hint--content {
+
+.close .sub-hint--content {
+  display: none;
   animation: sub-hint--content__fadeIn 300ms ease-out 0s reverse;
 }
 
 @keyframes sub-hint--content__fadeIn {
   0%{
-    display: none;
     opacity: 0;
     margin-top: -15px;
   }
   100%{
-    display: block;
     opacity: 1;
     margin-top: 0px;
   }
