@@ -81,7 +81,7 @@ window.addEventListener('popstate', function(event) {
         if (countReload >= 210){
             ifOverTwoHundredTen();
             // if(countClickStartButton >= 100) {
-            //     alertMessage = String(password);
+            //     alertMessage = password;
             // }else{
             //     alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
             // }
@@ -377,7 +377,7 @@ $('#section--end__input input').keydown(function() {
     for(let i = 0; i <= $('#section--end__input input').length - 1; i++) {
         value += $('#section--end__input input').eq(i).val();
     }
-    if(value !== String(password)) {
+    if(value !== password) {
         isValidPassword = false;
     }
     if(value.length <= 1) {
