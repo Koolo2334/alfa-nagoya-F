@@ -325,6 +325,7 @@ button {
   height: 28px;
   background-color: #1d0836;
   text-align: center;
+  z-index: 2;
 }
 
 .sub-hint--title--text {
@@ -380,7 +381,6 @@ button {
 }
 
 .sub-hint--content {
-  display: none;
   background-color: #7A5078;
   color: #c6c6c6;
   text-align: center;
@@ -399,7 +399,7 @@ button {
 }
 
 .close .sub-hint--content {
-  animation: sub-hint--content__fadeOut 300ms ease-in 0s normal;
+  animation: sub-hint--content__fadeOut forwards 300ms ease-in 0s normal;
 }
 
 @keyframes sub-hint--content__fadeIn {
