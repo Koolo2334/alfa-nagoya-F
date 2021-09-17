@@ -397,6 +397,7 @@ button {
 
 .open .sub-hint--content {
   opacity: 1;
+  /*height:autoはアニメーションが適用されないのでtransform: scaleY(1)をお勧めします*/
   height: auto;
   transform: scaleY(1);
 }
