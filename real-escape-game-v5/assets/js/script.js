@@ -121,7 +121,7 @@ function check_chartype(obj, type){
             }
         }
     }else if(type === "123") {
-        if(text_obj.match(/^[1-9]+$/)){
+        if(text_obj.match(/^[0-9]+$/)){
             if(text_length > 1){
                 $(obj).val(_checkchar_value[obj.attr('id')]);
             }else{
