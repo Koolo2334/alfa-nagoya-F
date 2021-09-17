@@ -352,6 +352,12 @@ button {
 .sub-hint--title--symbol::after {
   transform: rotate(90deg);
   margin-top: -4px;
+  transition: transform ease-out 50ms;
+}
+
+.sub-hint--title--symbol::before {
+  transform: rotate(0deg);
+  transition: transform ease-out 50ms;
 }
 
 .show.sub-hint {
@@ -364,10 +370,12 @@ button {
 
 .open .sub-hint--title--symbol::before {
   transform: rotate(-45deg);
+  transition: transform ease-out 50ms;
 }
 
 .open .sub-hint--title--symbol::after {
   transform: rotate(45deg);
+  transition: transform ease-out 50ms;
 }
 
 .sub-hint--content {
