@@ -91,11 +91,14 @@ window.addEventListener('popstate', function(event) {
     countReload++;
 });
 
-function ifOverTwoHundredTen() {
+function ifOverTwoHundredTen(fromDevtool) {
     if(countClickStartButton >= 100) {
         alertMessage = password;
     }else{
         alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
+    }
+    if(fromDevtool === 1) {
+        alert(alertMessage);
     }
 }
 
