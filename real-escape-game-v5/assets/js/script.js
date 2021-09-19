@@ -232,7 +232,7 @@ $('#btn-start').on('click', async function() {
         }
         if(value == password) {
             if (confirm('パスワードを確認しました。 脱出しますか？')) {
-                history.go(-5);
+                history.go(-4);
                 window.location.replace = '/alfa-nagoya-F/real-escape-game-v5/final?q=99';
             }
         }
