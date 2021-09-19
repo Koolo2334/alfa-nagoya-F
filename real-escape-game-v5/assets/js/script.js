@@ -10,8 +10,10 @@ let isFocused = false,
     password = ("00000000" + Math.floor(Math.random() * 100000000)).slice(-8);
 
 window.addEventListener('beforeunload', function(e) {
-    e.preventDefault();
-    e.returnValue = '';
+    if(!isClearGame) {
+        e.preventDefault();
+        e.returnValue = '';
+    }
 });
 
 window.addEventListener('popstate', function(event) {
