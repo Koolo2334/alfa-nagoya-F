@@ -301,12 +301,11 @@ $('#btn-start').on('click', async function() {
         }else if(countClickHintButton === 91) {
             $('#btn-start--hint').text('さようなら');
         }else if(countClickHintButton === 92) {
-            $(this).text('脱出する')
+            $(this).text('脱出する');
         }else if(countClickHintButton >= 93) {
             isClearGame = true;
             window.location.href = '/alfa-nagoya-F/real-escape-game-v5/final?q=39';
         }
-    }
     }else if(countClickStartButton >= 100 && !isClearQuiz1) {
         if(countClickStartButton === 100) {
             $('#btn-start').text('Enter');
