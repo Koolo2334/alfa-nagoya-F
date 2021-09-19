@@ -163,7 +163,9 @@ function check_chartype(obj, type){
 async function quiz1() {
     $('#section--first').addClass('quiz1');
     $('#section--first__title').text('M E L U O W E');
-    $('#btn-start').text('Look Back...');
+    if(countClickStartButton < 210) {
+        $('#btn-start').text('Look Back...');
+    }
     await delay(200);
     $('#quiz1__sub-hint1').addClass('show')
 }
