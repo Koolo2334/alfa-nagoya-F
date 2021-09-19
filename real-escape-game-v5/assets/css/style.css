@@ -434,6 +434,7 @@ button {
 }
 
 #btn-start--hint {
+  display: none;
   color: #c6c6c6;
 }
   
