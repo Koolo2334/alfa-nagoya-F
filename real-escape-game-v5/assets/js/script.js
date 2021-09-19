@@ -1,7 +1,6 @@
 let isFocused = false,
     isClearQuiz1 = false,
     isClearQuiz2 = false,
-    isValidPassword = false,
     countClickStartButton = 0,
     countReload = 0,
     d = document,
@@ -227,6 +226,15 @@ $('#btn-start').on('click', async function() {
             $('#btn-start').text('Enter');
             $('#section--end__input').css('display','flex');
         }
+        let value = "";
+        for(let i = 0; i <= $('#section--end__input input').length - 1; i++) {
+            value += $('#section--end__input input').eq(i).val();
+        }
+        if(value == password) {
+            if (confirm('パスワードを確認しました。 脱出しますか？')) {
+                window.location.href = '/real-escape-game-v5/final.html';
+            }
+        }
     }
 })
 
@@ -372,18 +380,12 @@ $('#section--end__input input').on('input', async function(){
     if(value.length >= 1) {
         $('#section--end__input input').attr('placeholder','');
     }
-    if(value == String(password)) {
-        isValidPassword = true;
-    }
 });
 
 $('#section--end__input input').keydown(function() {
     let value = "";
     for(let i = 0; i <= $('#section--end__input input').length - 1; i++) {
         value += $('#section--end__input input').eq(i).val();
-    }
-    if(value !== password) {
-        isValidPassword = false;
     }
     if(value.length <= 1) {
         $('#section--end__input input').eq(0).attr('placeholder','P');
