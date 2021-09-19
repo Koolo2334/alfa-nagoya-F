@@ -14,7 +14,9 @@ window.addEventListener('beforeunload', function(e) {
 });
 
 window.addEventListener('popstate', function(event) {
-    window.history.pushState(null, null, null)
+    for(let i = 0; i < 2; i++) {
+       window.history.pushState(null, null, null)
+   }
 //     history.forward()
     if(countReload === 0) {
         alertMessage = "...";
