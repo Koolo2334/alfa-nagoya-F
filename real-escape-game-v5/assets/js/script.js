@@ -257,60 +257,60 @@ $('#btn-start').on('click', async function() {
             $('#btn-start--hint').text('ヒントボタンではなくブラウザのページを戻るボタンをクリックする');
         }else if(countClickHintButton === 30) {
             $('#btn-start--hint').text('「ヒントボタン」を押すことをやめて、もともとブラウザに備わっている「ページを戻るボタン」をクリックする。');
-        }else if(countClickHintButton === 50) {
+        }else if(countClickHintButton === 75) {
             $('#btn-start--hint').text('いい加減にブラウザバックしなよ');
-        }else if(countClickHintButton === 70) {
+        }else if(countClickHintButton === 100) {
             $('#btn-start--hint').text('もしかして戻れない？');
             $(this).text('No');
-        }else if(countClickHintButton === 71) {
+        }else if(countClickHintButton === 101) {
             $('#btn-start--hint').text('それとも戻りたくない？');
             $(this).text('Yes');
-        }else if(countClickHintButton === 72) {
+        }else if(countClickHintButton === 102) {
             $('#btn-start--hint').text('もしかして、ここに居てくれるの？');
             $(this).text('Yes')
-        }else if(countClickHintButton === 73) {
+        }else if(countClickHintButton === 103) {
             $('#btn-start--hint').text('もっと一緒に遊んでくれるの？');
             $(this).text('Yes')
-        }else if(countClickHintButton === 74) {
+        }else if(countClickHintButton === 104) {
             $('#btn-start--hint').text('...');
             $(this).text('...')
-        }else if(countClickHintButton === 75) {
+        }else if(countClickHintButton === 105) {
             $('#btn-start--hint').text('......');
-        }else if(countClickHintButton === 76) {
+        }else if(countClickHintButton === 106) {
             $('#btn-start--hint').text('ありがとう');
-        }else if(countClickHintButton === 77) {
+        }else if(countClickHintButton === 107) {
             $('#btn-start--hint').text('本当は遊びたかっただけなんだ...');
-        }else if(countClickHintButton === 78) {
+        }else if(countClickHintButton === 108) {
             $('#btn-start--hint').text('...');
-        }else if(countClickHintButton === 79) {
+        }else if(countClickHintButton === 109) {
             $('#btn-start--hint').text('でももうこれ以上遊ぶことはできない');
-        }else if(countClickHintButton === 80) {
+        }else if(countClickHintButton === 110) {
             $('#btn-start--hint').text('だって...');
-        }else if(countClickHintButton === 81) {
+        }else if(countClickHintButton === 111) {
             $('#btn-start--hint').text('君ももう時間が無いんじゃない？');
-        }else if(countClickHintButton === 82) {
+        }else if(countClickHintButton === 112) {
             $('#btn-start--hint').text('それに、これ以上出題できるクイズも作ってないし');
-        }else if(countClickHintButton === 83) {
+        }else if(countClickHintButton === 113) {
             $('#btn-start--hint').text('制作期間が1ヶ月しかなかったから...');
-        }else if(countClickHintButton === 84) {
+        }else if(countClickHintButton === 114) {
             $('#btn-start--hint').text('でも気持ちは嬉しい');
-        }else if(countClickHintButton === 85) {
+        }else if(countClickHintButton === 115) {
             $('#btn-start--hint').text('だから特別に脱出させてあげるよ');
-        }else if(countClickHintButton === 86) {
+        }else if(countClickHintButton === 116) {
             $('#btn-start--hint').text('準備するからちょっと待っててね');
-        }else if(countClickHintButton === 87) {
+        }else if(countClickHintButton === 117) {
             $('#btn-start--hint').text('いくよ？');
-        }else if(countClickHintButton === 88) {
+        }else if(countClickHintButton === 118) {
             $('#btn-start--hint').text('3');
-        }else if(countClickHintButton === 89) {
+        }else if(countClickHintButton === 119) {
             $('#btn-start--hint').text('2');
-        }else if(countClickHintButton === 90) {
+        }else if(countClickHintButton === 120) {
             $('#btn-start--hint').text('1');
-        }else if(countClickHintButton === 91) {
+        }else if(countClickHintButton === 121) {
             $('#btn-start--hint').text('さようなら');
-        }else if(countClickHintButton === 92) {
+        }else if(countClickHintButton === 122) {
             $(this).text('脱出する');
-        }else if(countClickHintButton >= 93) {
+        }else if(countClickHintButton >= 123) {
             isClearGame = true;
             window.location.href = '/alfa-nagoya-F/real-escape-game-v5/final?q=39';
         }
