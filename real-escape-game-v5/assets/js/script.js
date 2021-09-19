@@ -1,6 +1,7 @@
 let isFocused = false,
     isClearQuiz1 = false,
     isClearQuiz2 = false,
+    isClearGame = false,
     countClickStartButton = 0,
     countReload = 0,
     d = document,
@@ -14,82 +15,83 @@ window.addEventListener('beforeunload', function(e) {
 });
 
 window.addEventListener('popstate', function(event) {
-    for(let i = 0; i < 2; i++) {
-       window.history.pushState(null, null, null)
-   }
-//     history.forward()
-    if(countReload === 0) {
-        alertMessage = "...";
-    }else if(countReload === 1) {
-        alertMessage = "......";
-    }else if(countReload === 2) {
-        alertMessage = "............";
-    }else if(countReload === 3) {
-        alertMessage = "...............戻りたい?";
-    }else if(countReload === 4) {
-        alertMessage = "............";
-    }else if(countReload === 6) {
-        alertMessage = "...............無理だよ";
-    }else if(countReload === 7) {
-        alertMessage = "...............多分...";
-    }else if(countReload === 8) {
-        alertMessage = "............";
-    }
-    if(!isClearQuiz1) {
-        if(countReload === 13) {
-            alertMessage = "...............まだやるの...?";
-        }else if(countReload === 14) {
+    if(!isClearGame) {
+        for(let i = 0; i < 2; i++) {
+           window.history.pushState(null, null, null)
+       }
+        if(countReload === 0) {
+            alertMessage = "...";
+        }else if(countReload === 1) {
+            alertMessage = "......";
+        }else if(countReload === 2) {
             alertMessage = "............";
-        }else if(countReload === 19) {
-            alertMessage = "...............そろそろ諦めたら...?";
-        }else if(countReload === 20) {
+        }else if(countReload === 3) {
+            alertMessage = "...............戻りたい?";
+        }else if(countReload === 4) {
             alertMessage = "............";
-        }else if(countReload === 50) {
-            alertMessage = "............あと50回";
-        }else if(countReload === 51) {
-            alertMessage = "............";
-        }else if(countReload === 70) {
-            alertMessage = "............あと30回";
-        }else if(countReload === 71) {
-            alertMessage = "............";
-        }else if(countReload === 90) {
-            alertMessage = "............あと10回";
-        }else if(countReload === 91) {
-            alertMessage = "............";
-        }else if(countReload === 95) {
-            alertMessage = "............あと5回";
-        }else if(countReload === 96) {
-            alertMessage = "............";
-        }else if(countReload === 97) {
-            alertMessage = "............あと3回";
-        }else if(countReload === 98) {
-            alertMessage = "............あと2回";
-        }else if(countReload === 99) {
-            alertMessage = "............あと1回";
-        }else if(countReload === 100) {
-            alertMessage = "............100回達成したよ！おめでとう！！";
-        }else if(countReload === 101) {
-            alertMessage = "............";
-        }else if(countReload === 150) {
-            alertMessage = "............150回";
-        }else if(countReload === 151) {
-            alertMessage = "............";
-        }else if(countReload === 200) {
-            alertMessage = "............200回";
-        }else if(countReload === 201) {
+        }else if(countReload === 6) {
+            alertMessage = "...............無理だよ";
+        }else if(countReload === 7) {
+            alertMessage = "...............多分...";
+        }else if(countReload === 8) {
             alertMessage = "............";
         }
-        if (countReload >= 210){
-            ifOverTwoHundredTen();
-            // if(countClickStartButton >= 100) {
-            //     alertMessage = password;
-            // }else{
-            //     alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
-            // }
+        if(!isClearQuiz1) {
+            if(countReload === 13) {
+                alertMessage = "...............まだやるの...?";
+            }else if(countReload === 14) {
+                alertMessage = "............";
+            }else if(countReload === 19) {
+                alertMessage = "...............そろそろ諦めたら...?";
+            }else if(countReload === 20) {
+                alertMessage = "............";
+            }else if(countReload === 50) {
+                alertMessage = "............あと50回";
+            }else if(countReload === 51) {
+                alertMessage = "............";
+            }else if(countReload === 70) {
+                alertMessage = "............あと30回";
+            }else if(countReload === 71) {
+                alertMessage = "............";
+            }else if(countReload === 90) {
+                alertMessage = "............あと10回";
+            }else if(countReload === 91) {
+                alertMessage = "............";
+            }else if(countReload === 95) {
+                alertMessage = "............あと5回";
+            }else if(countReload === 96) {
+                alertMessage = "............";
+            }else if(countReload === 97) {
+                alertMessage = "............あと3回";
+            }else if(countReload === 98) {
+                alertMessage = "............あと2回";
+            }else if(countReload === 99) {
+                alertMessage = "............あと1回";
+            }else if(countReload === 100) {
+                alertMessage = "............100回達成したよ！おめでとう！！";
+            }else if(countReload === 101) {
+                alertMessage = "............";
+            }else if(countReload === 150) {
+                alertMessage = "............150回";
+            }else if(countReload === 151) {
+                alertMessage = "............";
+            }else if(countReload === 200) {
+                alertMessage = "............200回";
+            }else if(countReload === 201) {
+                alertMessage = "............";
+            }
+            if (countReload >= 210){
+                ifOverTwoHundredTen();
+                // if(countClickStartButton >= 100) {
+                //     alertMessage = password;
+                // }else{
+                //     alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
+                // }
+            }
         }
+        alert(alertMessage);
+        countReload++;
     }
-    alert(alertMessage);
-    countReload++;
 });
 
 function ifOverTwoHundredTen(fromDevtool) {
@@ -234,7 +236,8 @@ $('#btn-start').on('click', async function() {
         }
         if(value == password) {
             if (confirm('パスワードを確認しました。 脱出しますか？')) {
-                history.go(-4);
+                isClearGame = true;
+                history.go(history.length * -1 + 1);
                 window.location.replace = '/alfa-nagoya-F/real-escape-game-v5/final?q=99';
             }
         }
