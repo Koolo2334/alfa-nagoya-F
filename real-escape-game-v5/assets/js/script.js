@@ -3,6 +3,7 @@ let isFocused = false,
     isClearQuiz2 = false,
     isClearGame = false,
     countClickStartButton = 0,
+    countClickHintButton = 0,
     countReload = 0,
     d = document,
     _checkchar_value = {},
@@ -20,32 +21,33 @@ window.addEventListener('popstate', function(event) {
     if(!isClearGame) {
         for(let i = 0; i < 2; i++) {
            window.history.pushState(null, null, null)
-       }
-        if(countReload === 0) {
+        }
+        countReload++;
+        if(countReload === 1) {
             alertMessage = "...";
-        }else if(countReload === 1) {
-            alertMessage = "......";
         }else if(countReload === 2) {
-            alertMessage = "............";
+            alertMessage = "......";
         }else if(countReload === 3) {
-            alertMessage = "...............戻りたい?";
-        }else if(countReload === 4) {
             alertMessage = "............";
-        }else if(countReload === 6) {
-            alertMessage = "...............無理だよ";
+        }else if(countReload === 4) {
+            alertMessage = "...............戻りたい?";
+        }else if(countReload === 5) {
+            alertMessage = "............";
         }else if(countReload === 7) {
-            alertMessage = "...............多分...";
+            alertMessage = "...............無理だよ";
         }else if(countReload === 8) {
+            alertMessage = "...............多分...";
+        }else if(countReload === 9) {
             alertMessage = "............";
         }
         if(!isClearQuiz1) {
-            if(countReload === 13) {
+            if(countReload === 14) {
                 alertMessage = "...............まだやるの...?";
-            }else if(countReload === 14) {
+            }else if(countReload === 15) {
                 alertMessage = "............";
-            }else if(countReload === 19) {
-                alertMessage = "...............そろそろ諦めたら...?";
             }else if(countReload === 20) {
+                alertMessage = "...............そろそろ諦めたら...?";
+            }else if(countReload === 21) {
                 alertMessage = "............";
             }else if(countReload === 50) {
                 alertMessage = "............あと50回";
@@ -87,12 +89,12 @@ window.addEventListener('popstate', function(event) {
                 // if(countClickStartButton >= 100) {
                 //     alertMessage = password;
                 // }else{
+                //     $('#btn-start').text('スタートボタン');
                 //     alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
                 // }
             }
         }
         alert(alertMessage);
-        countReload++;
     }
 });
 
@@ -100,6 +102,7 @@ function ifOverTwoHundredTen(fromDevtool) {
     if(countClickStartButton >= 100) {
         alertMessage = password;
     }else{
+        $('#btn-start').text('スタートボタン');
         alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
     }
     if(fromDevtool === 1) {
@@ -227,6 +230,83 @@ $('#btn-start').on('click', async function() {
         document.removeEventListener('touchmove', disableScroll, { passive: false });
         document.removeEventListener('mousewheel', disableScroll, { passive: false });
         $('#blackscreen').css('display','none');
+    }else if(isClearQuiz2) {
+        countClickHintButton++
+        if(countClickHintButton === 1) {
+            $('#btn-start--hint').text('Quiz2の答え');
+            $('#btn-start--hint').css('display','inline')
+        }else if(countClickHintButton === 2) {
+            $('#btn-start--hint').text('Leave this page. Go Back.');
+        }else if(countClickHintButton === 3) {
+            $('#btn-start--hint').text('前のページに戻る');
+        }else if(countClickHintButton === 4) {
+            $('#btn-start--hint').text('ボタンを押す');
+        }else if(countClickHintButton === 5) {
+            $('#btn-start--hint').text('戻るボタン');
+        }else if(countClickHintButton === 10) {
+            $('#btn-start--hint').text('ブラウザの戻るボタンをクリックする');
+        }else if(countClickHintButton === 20) {
+            $('#btn-start--hint').text('ヒントボタンではなくブラウザのページを戻るボタンをクリックする');
+        }else if(countClickHintButton === 30) {
+            $('#btn-start--hint').text('「ヒントボタン」を押すことをやめて、もともとブラウザに備わっている「ページを戻るボタン」をクリックする。');
+        }else if(countClickHintButton === 50) {
+            $('#btn-start--hint').text('いい加減にブラウザバックしなよ');
+        }else if(countClickHintButton === 70) {
+            $('#btn-start--hint').text('もしかして戻れない？');
+            $(this).text('No');
+        }else if(countClickHintButton === 71) {
+            $('#btn-start--hint').text('それとも戻りたくない？');
+            $(this).text('Yes');
+        }else if(countClickHintButton === 72) {
+            $('#btn-start--hint').text('もしかして、ここに居てくれるの？');
+            $(this).text('Yes')
+        }else if(countClickHintButton === 73) {
+            $('#btn-start--hint').text('もっと一緒に遊んでくれるの？');
+            $(this).text('Yes')
+        }else if(countClickHintButton === 74) {
+            $('#btn-start--hint').text('...');
+            $(this).text('...')
+        }else if(countClickHintButton === 75) {
+            $('#btn-start--hint').text('......');
+        }else if(countClickHintButton === 76) {
+            $('#btn-start--hint').text('ありがとう');
+        }else if(countClickHintButton === 77) {
+            $('#btn-start--hint').text('本当は遊びたかっただけなんだ...');
+        }else if(countClickHintButton === 78) {
+            $('#btn-start--hint').text('...');
+        }else if(countClickHintButton === 79) {
+            $('#btn-start--hint').text('でももうこれ以上遊ぶことはできない');
+        }else if(countClickHintButton === 80) {
+            $('#btn-start--hint').text('だって...');
+        }else if(countClickHintButton === 81) {
+            $('#btn-start--hint').text('君ももう時間が無いんじゃない？');
+        }else if(countClickHintButton === 82) {
+            $('#btn-start--hint').text('それに、これ以上出題できるクイズも作ってないし');
+        }else if(countClickHintButton === 83) {
+            $('#btn-start--hint').text('制作期間が1ヶ月しかなかったから...');
+        }else if(countClickHintButton === 84) {
+            $('#btn-start--hint').text('でも気持ちは嬉しい');
+        }else if(countClickHintButton === 85) {
+            $('#btn-start--hint').text('だから特別に脱出させてあげるよ');
+        }else if(countClickHintButton === 86) {
+            $('#btn-start--hint').text('準備するからちょっと待っててね');
+        }else if(countClickHintButton === 87) {
+            $('#btn-start--hint').text('いくよ？');
+        }else if(countClickHintButton === 88) {
+            $('#btn-start--hint').text('3');
+        }else if(countClickHintButton === 89) {
+            $('#btn-start--hint').text('2');
+        }else if(countClickHintButton === 90) {
+            $('#btn-start--hint').text('1');
+        }else if(countClickHintButton === 91) {
+            $('#btn-start--hint').text('さようなら');
+        }else if(countClickHintButton === 92) {
+            $(this).text('脱出する')
+        }else if(countClickHintButton >= 93) {
+            isClearGame = true;
+            window.location.href = '/alfa-nagoya-F/real-escape-game-v5/final?q=39';
+        }
+    }
     }else if(countClickStartButton >= 100 && !isClearQuiz1) {
         if(countClickStartButton === 100) {
             $('#btn-start').text('Enter');
@@ -298,7 +378,7 @@ $('#section--first__input input').on('input', async function(){
             $('#section--first__input').html('<div>W</div><div>E</div><div>L</div><div>C</div><div>O</div><div>M</div><div>E</div>');
             $('#section--first').addClass('quiz1--clear');
             isClearQuiz1 = true;
-            $('#btn-start').text('Look Back...');
+            $('#btn-start').text('');
             $('#section--end__input').css('display','none');
             quiz2();
             await delay(2);
@@ -346,8 +426,9 @@ $('#section--second__input input').on('input', async function(){
         if(value == "GOBACK") {
             $('#section--second__input').html('<div>G</div><div>O</div><div>B</div><div>A</div><div>C</div><div>K</div>');
             $('#section--second').addClass('quiz1--clear');
-            isClearQuiz1 = true;
+            isClearQuiz2 = true;
             $('#section--third').addClass('quiz2');
+            $('#btn-start').text('Hint...');
             await delay(2);
             $('#section--second__input div').css('background-color','#1d0836');
             await delay(1.5);
