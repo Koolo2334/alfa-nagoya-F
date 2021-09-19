@@ -232,6 +232,10 @@ button {
   }
 }
 
+.section--end{
+  text-align: center;
+}
+
 .section__arrow{
   display: none;
   position: relative;
