@@ -377,7 +377,7 @@ $('#section--first__input input').on('input', async function(){
             $('#section--first__input').html('<div>W</div><div>E</div><div>L</div><div>C</div><div>O</div><div>M</div><div>E</div>');
             $('#section--first').addClass('quiz1--clear');
             isClearQuiz1 = true;
-            $('#btn-start').text('');
+            $('#btn-start').text(' ');
             $('#section--end__input').css('display','none');
             quiz2();
             await delay(2);
