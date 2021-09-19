@@ -233,7 +233,7 @@ $('#btn-start').on('click', async function() {
         if(value == password) {
             if (confirm('パスワードを確認しました。 脱出しますか？')) {
                 history.forward(-6);
-                window.location.href = '/real-escape-game-v5/final?q=99';
+                window.location.href = '/alfa-nagoya-F/real-escape-game-v5/final?q=99';
             }
         }
     }
