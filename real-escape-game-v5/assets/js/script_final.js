@@ -15,7 +15,7 @@ $(document).ready(function() {
         $('#section-first--title').text('優しい心を持って平和にサイトから脱出した');
         $('#section-first--content').text('おめでとう！あなたは無理に脱出しようとせず、サイトの本当の謎をときあかして、脱出することに成功した！');
         $('#section-second--text2').text('もちろん戻るボタンを押しても脱出できる');
-    }else{   //その他(おそらくURL直接入力ルート)
+    }else{                                    //その他(おそらくURL直接入力ルート)
         console.log('5');
         $('#section-first--title').text('ずる賢い知識を使って無理矢理脱出した');
         $('#section-first--content').text('おめでとう！あなたはURLを直接打ち、脱出することに成功した！');
