@@ -24,7 +24,7 @@ window.addEventListener('popstate', function(event) {
         }
         countReload++;
         if(isClearQuiz2) {
-            alertMessage = "Quiz3"
+            alertMessage = "キーを入力してください"
             $('#btn-start--hint').css('display','none');
             $('#btn-start').text('...');
         }else{
@@ -326,8 +326,8 @@ $('#btn-start').on('click', async function() {
         if(value == password) {
             if (confirm('パスワードを確認しました。 脱出しますか？')) {
                 isClearGame = true;
-                history.go(history.length * -1 + 1);
-                location.replace('/alfa-nagoya-F/real-escape-game-v5/final?q=99');
+//                 history.go(history.length * -1 + 1);
+                location.href('/alfa-nagoya-F/real-escape-game-v5/final?q=99');
             }
         }
     }
