@@ -12,4 +12,4 @@ $(document).ready(function() {
         $('#section-first--content').text('おめでとう！あなたは無理に脱出しようとせず、サイトの本当の謎をときあかして、脱出することに成功した！');
         $('#section-second--text2').text('もちろん戻るボタンを押しても脱出できる');
     }
-}
+});
