@@ -31,7 +31,7 @@ window.addEventListener('popstate', function(event) {
         }
         countReload++;
         if(isClearQuiz2) {
-            alertMessage = 'PASSCODEを入力してください。\nKEYWORD : 6 8 4 9 8 0 9 9'
+            alertMessage = 'ロックされています。PASSCODEを入力してください。\nKEYWORD : 6 8 4 9 8 0 9 9'
             $('#btn-start--hint').css('display','none');
             $('#btn-start').text('...');
             if(!$('#section--top').hasClass('quiz3')) {
@@ -461,7 +461,7 @@ $('#section--second__input input').on('input', async function(){
             $('#section--second__input').html('<div>G</div><div>O</div><div>B</div><div>A</div><div>C</div><div>K</div>');
             $('#section--second').addClass('quiz2--clear');
             isClearQuiz2 = true;
-            $('#btn-start').text('Hint...');
+            $('#btn-start').text('.+*Special Hint*+.');
             await delay(2);
             $('#section--second__input div').css('background-color','#1d0836');
             await delay(1.5);
