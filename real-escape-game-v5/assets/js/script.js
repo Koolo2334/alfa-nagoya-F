@@ -20,6 +20,10 @@ window.addEventListener('beforeunload', function(e) {
 
 window.addEventListener('popstate', function(event) {
     if(isClearQuiz3) {
+        for(let i = 0; i < 2; i++) {
+           window.history.pushState(null, null, null)
+        }
+        countReload++;
         if (confirm('パスワードを確認しました。 脱出しますか？')) {
             isClearGame = true;
             history.go(history.length * -1 + 1);
