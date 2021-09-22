@@ -1,6 +1,7 @@
 let isFocused = false,
     isClearQuiz1 = false,
     isClearQuiz2 = false,
+    isClearQuiz3 = false,
     isClearGame = false,
     countClickStartButton = 0,
     countClickHintButton = 0,
@@ -23,10 +24,19 @@ window.addEventListener('popstate', function(event) {
            window.history.pushState(null, null, null)
         }
         countReload++;
-        if(isClearQuiz2) {
-            alertMessage = 'PASSCODEを入力してください\nKEYWORD : 68498099'
+        if(isClearQuiz3) {
+            if (confirm('パスワードを確認しました。 脱出しますか？')) {
+                isClearGame = true;
+                history.go(history.length * -1 + 1);
+                location.href('/alfa-nagoya-F/real-escape-game-v5/final?q=96');
+            }
+        }else if(isClearQuiz2) {
+            alertMessage = 'PASSCODEを入力してください。\nKEYWORD : 68498099'
             $('#btn-start--hint').css('display','none');
             $('#btn-start').text('...');
+            if(!$('#section--top').hasClass('quiz3')) {
+                $('#section--top').addClass('quiz3');
+            }
         }else{
             if(countReload === 1) {
                 alertMessage = "...";
@@ -152,6 +162,23 @@ function check_chartype(obj, type){
                 $(obj).val(_checkchar_value[obj.attr('id')]);
             }else{
                 _checkchar_value[obj.attr('id')] = text_obj;
+                $(obj).val(_checkchar_value[obj.attr('id')]);
+                let index = $(obj).index();
+                $(obj).parent().find('input').eq(index + 1).focus();
+            }
+        }else{
+            if(text_length === 0){
+                _checkchar_value[obj.attr('id')] = "";
+            }else{
+                $(obj).val(_checkchar_value[obj.attr('id')]);
+            }
+        }
+    }else if(type === "123ABC") {
+        if(text_obj.match(/^[1-9A-Za-z]+$/)){
+            if(text_length > 1){
+                $(obj).val(_checkchar_value[obj.attr('id')]);
+            }else{
+                _checkchar_value[obj.attr('id')] = text_obj.toUpperCase();
                 $(obj).val(_checkchar_value[obj.attr('id')]);
                 let index = $(obj).index();
                 $(obj).parent().find('input').eq(index + 1).focus();
@@ -432,9 +459,8 @@ $('#section--second__input input').on('input', async function(){
     if(value.length === 6) {
         if(value == "GOBACK") {
             $('#section--second__input').html('<div>G</div><div>O</div><div>B</div><div>A</div><div>C</div><div>K</div>');
-            $('#section--second').addClass('quiz1--clear');
+            $('#section--second').addClass('quiz2--clear');
             isClearQuiz2 = true;
-            $('#section--third').addClass('quiz2');
             $('#btn-start').text('Hint...');
             await delay(2);
             $('#section--second__input div').css('background-color','#1d0836');
@@ -464,6 +490,92 @@ $('#section--second__input input').keydown(function() {
         $('#section--second__input input').eq(3).attr('placeholder','W');
         $('#section--second__input input').eq(4).attr('placeholder','E');
         $('#section--second__input input').eq(5).attr('placeholder','R');
+    }
+});
+
+$('#section--third__input input').on('input', async function(){
+    let value = "";
+    check_chartype($(this),'123ABC');
+    for(let i = 0; i <= $('#section--third__input input').length - 1; i++) {
+        value += $('#section--third__input input').eq(i).val();
+    }
+    if(value.length >= 1) {
+        $('#section--third__input input').attr('placeholder','');
+    }
+    if(value.length === 8) {
+        if(value == "68498099") {
+            $('#section--third__input').html('<div>6</div><div>8</div><div>4</div><div>9</div><div>8</div><div>0</div><div>9</div><div>9</div>');
+        }else{
+            $('#section--third__input input').css('background-color','#741218');
+            await delay(2);
+            $('#section--third__input input').css('background-color','#1d0836');
+        }
+    }
+});
+
+$('#section--third__input input').keydown(function() {
+    let value = "";
+    for(let i = 0; i <= $('#section--third__input input').length - 1; i++) {
+        value += $('#section--third__input input').eq(i).val();
+    }
+    if(value.length <= 1) {
+        $('#section--third__input input').eq(0).attr('placeholder','K');
+        $('#section--third__input input').eq(1).attr('placeholder','E');
+        $('#section--third__input input').eq(2).attr('placeholder','Y');
+        $('#section--third__input input').eq(3).attr('placeholder','W');
+        $('#section--third__input input').eq(4).attr('placeholder','O');
+        $('#section--third__input input').eq(5).attr('placeholder','R');
+        $('#section--third__input input').eq(6).attr('placeholder','D');
+        $('#section--third__input input').eq(7).attr('placeholder','.');
+    }
+});
+
+$('#section--fourth__input input').on('input', async function(){
+    let value = "";
+    check_chartype($(this),'123ABC');
+    for(let i = 0; i <= $('#section--fourth__input input').length - 1; i++) {
+        value += $('#section--fourth__input input').eq(i).val();
+    }
+    if(value.length >= 1) {
+        $('#section--fourth__input input').attr('placeholder','');
+    }
+    if(value.length === 7) {
+        if(value == "SAYONARA") {
+            $('#section--fourth__input').html('<div>S</div><div>A</div><div>Y</div><div>O</div><div>N</div><div>A</div><div>R</div><div>A</div>');
+            $('#section--top').addClass('quiz3--clear');
+            await delay(2);
+            $('#section--fourth__input div').css('background-color','#1d0836');
+            await delay(1.5);
+            $('#section--fourth__input div').css('background-color','#b39b30');
+            await delay(2);
+            alert('PASSCODEを確認しました。ロックを解除します。');
+            isClearQuiz3 = true;
+        }else{
+            $('#section--fourth__input input').css('background-color','#741218');
+            await delay(2);
+            $('#section--fourth__input input').css('background-color','#1d0836');
+            await delay(2);
+            $('#section--fourth__input input').css('background-color','#741218');
+            await delay(3);
+            $('#section--fourth__input input').css('background-color','#1d0836');
+        }
+    }
+});
+
+$('#section--fourth__input input').keydown(function() {
+    let value = "";
+    for(let i = 0; i <= $('#section--fourth__input input').length - 1; i++) {
+        value += $('#section--fourth__input input').eq(i).val();
+    }
+    if(value.length <= 1) {
+        $('#section--fourth__input input').eq(0).attr('placeholder','P');
+        $('#section--fourth__input input').eq(1).attr('placeholder','A');
+        $('#section--fourth__input input').eq(2).attr('placeholder','S');
+        $('#section--fourth__input input').eq(3).attr('placeholder','S');
+        $('#section--fourth__input input').eq(4).attr('placeholder','C');
+        $('#section--fourth__input input').eq(5).attr('placeholder','O');
+        $('#section--fourth__input input').eq(6).attr('placeholder','D');
+        $('#section--fourth__input input').eq(7).attr('placeholder','E');
     }
 });
 
