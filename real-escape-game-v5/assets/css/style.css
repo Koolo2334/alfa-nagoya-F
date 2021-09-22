@@ -234,6 +234,7 @@ button {
 
 #section--top__title {
   padding: 0;
+  width: 400px;
 }
 
 .story {
@@ -294,6 +295,7 @@ button {
 
 #section--third__input, #section--fourth__input {
   width: 350px;
+  margin: 0 auto;
 }
 
 .section__input input {
@@ -309,6 +311,10 @@ button {
 
 #section--second__input input {
   width: 14%;
+}
+
+#section--third__input input, #section--fourth__input input {
+  width: 10%
 }
 
 .section__input div {
