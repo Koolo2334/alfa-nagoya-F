@@ -100,13 +100,13 @@ window.addEventListener('popstate', function(event) {
                     alertMessage = "............";
                 }
                 if (countReload >= 210){
-                    ifOverTwoHundredTen();
-                    // if(countClickStartButton >= 100) {
-                    //     alertMessage = password;
-                    // }else{
-                    //     $('#btn-start').text('スタートボタン');
-                    //     alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
-                    // }
+//                     ifOverTwoHundredTen();
+                    if(countClickStartButton >= 100) {
+                        alertMessage = password;
+                    }else{
+                        $('#btn-start').text('スタートボタン');
+                        alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
+                    }
                 }
             }
         }
@@ -114,17 +114,17 @@ window.addEventListener('popstate', function(event) {
     }
 });
 
-function ifOverTwoHundredTen(fromDevtool) {
-    if(countClickStartButton >= 100) {
-        alertMessage = password;
-    }else{
-        $('#btn-start').text('スタートボタン');
-        alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
-    }
-    if(fromDevtool === 1) {
-        alert(alertMessage);
-    }
-}
+// function ifOverTwoHundredTen(fromDevtool) {
+//     if(countClickStartButton >= 100) {
+//         alertMessage = password;
+//     }else{
+//         $('#btn-start').text('スタートボタン');
+//         alertMessage = `............スタートボタンをあと${100-countClickStartButton}回押してみたら？`;
+//     }
+//     if(fromDevtool === 1) {
+//         alert(alertMessage);
+//     }
+// }
 
 function delay(n){
     return new Promise(function(resolve){
@@ -174,7 +174,7 @@ function check_chartype(obj, type){
             }
         }
     }else if(type === "123ABC") {
-        if(text_obj.match(/^[1-9A-Za-z]+$/)){
+        if(text_obj.match(/^[0-9A-Za-z]+$/)){
             if(text_length > 1){
                 $(obj).val(_checkchar_value[obj.attr('id')]);
             }else{
