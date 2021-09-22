@@ -292,6 +292,10 @@ button {
   margin-bottom: 30px;
 }
 
+#section--third__input, #section--fourth__input {
+  width: 350px;
+}
+
 .section__input input {
   color: #c5c5c5;
   background-color: #1d0836;
@@ -645,6 +649,14 @@ button {
 
 .quiz2 #section--second__input {
   display: flex;
+}
+
+.quiz3 p, .quiz3 h2, .quiz3 li {
+  display: none;
+}
+
+.quiz3 .section__input {
+  display: block;
 }
 
 .box {
