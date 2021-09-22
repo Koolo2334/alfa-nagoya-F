@@ -232,6 +232,14 @@ button {
   }
 }
 
+#section--top__title {
+  padding: 0;
+}
+
+#quiz3-img {
+  width: 350px;
+}
+
 #section--end{
   text-align: center;
 }
