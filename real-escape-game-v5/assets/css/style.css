@@ -670,6 +670,11 @@ button {
   display: block;
 }
 
+.quiz3 #section--top__title {
+  padding: 10px 0;
+  width: 400px;
+}
+
 .box {
   padding: 35px 30px;
 }
