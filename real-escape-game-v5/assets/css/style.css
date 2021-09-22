@@ -243,6 +243,7 @@ button {
 
 #quiz3-img {
   width: 350px;
+  display: none;
 }
 
 #section--end{
@@ -662,6 +663,10 @@ button {
 }
 
 .quiz3 .section__input {
+  display: flex;
+}
+
+.quiz3 .quiz3-img {
   display: block;
 }
 
