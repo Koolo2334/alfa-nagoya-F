@@ -31,12 +31,12 @@ window.addEventListener('popstate', function(event) {
                 location.href('/alfa-nagoya-F/real-escape-game-v5/final?q=96');
             }
         }else if(isClearQuiz2) {
-            alertMessage = 'PASSCODEを入力してください。\nKEYWORD : 68498099'
             $('#btn-start--hint').css('display','none');
             $('#btn-start').text('...');
             if(!$('#section--top').hasClass('quiz3')) {
                 $('#section--top').addClass('quiz3');
             }
+            alertMessage = 'PASSCODEを入力してください。\nKEYWORD : 68498099'
         }else{
             if(countReload === 1) {
                 alertMessage = "...";
