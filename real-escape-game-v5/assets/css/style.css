@@ -236,6 +236,10 @@ button {
   padding: 0;
 }
 
+.story {
+  text-align: center;
+}
+
 #quiz3-img {
   width: 350px;
 }
