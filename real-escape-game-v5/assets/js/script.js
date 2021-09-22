@@ -24,7 +24,7 @@ window.addEventListener('popstate', function(event) {
         }
         countReload++;
         if(isClearQuiz2) {
-            alertMessage = "キーを入力してください"
+            alertMessage = 'PASSCODEを入力してください\nKEYWORD : 68498099'
             $('#btn-start--hint').css('display','none');
             $('#btn-start').text('...');
         }else{
