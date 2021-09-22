@@ -28,7 +28,7 @@ window.addEventListener('popstate', function(event) {
             if (confirm('パスワードを確認しました。 脱出しますか？')) {
                 isClearGame = true;
                 history.go(history.length * -1 + 1);
-                location.href('/alfa-nagoya-F/real-escape-game-v5/final?q=96');
+                location.replace('/alfa-nagoya-F/real-escape-game-v5/final?q=96');
             }
         }else if(isClearQuiz2) {
             alertMessage = 'PASSCODEを入力してください。\nKEYWORD : 6 8 4 9 8 0 9 9'
