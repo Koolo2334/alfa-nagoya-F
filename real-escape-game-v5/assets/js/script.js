@@ -539,7 +539,7 @@ $('#section--fourth__input input').on('input', async function(){
     if(value.length >= 1) {
         $('#section--fourth__input input').attr('placeholder','');
     }
-    if(value.length === 7) {
+    if(value.length === 8) {
         if(value == "SAYONARA") {
             $('#section--fourth__input').html('<div>S</div><div>A</div><div>Y</div><div>O</div><div>N</div><div>A</div><div>R</div><div>A</div>');
             $('#section--top').addClass('quiz3--clear');
