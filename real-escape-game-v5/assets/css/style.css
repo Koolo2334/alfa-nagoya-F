@@ -667,7 +667,7 @@ button {
 }
 
 .quiz3 #quiz3-img {
-  display: block;
+  display: inline;
 }
 
 .quiz3 #section--top__title {
