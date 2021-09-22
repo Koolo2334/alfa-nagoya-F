@@ -666,7 +666,7 @@ button {
   display: flex;
 }
 
-.quiz3 .quiz3-img {
+.quiz3 #quiz3-img {
   display: block;
 }
 
