@@ -36,7 +36,7 @@ window.addEventListener('popstate', function(event) {
             if(!$('#section--top').hasClass('quiz3')) {
                 $('#section--top').addClass('quiz3');
             }
-            alertMessage = 'PASSCODEを入力してください。\nKEYWORD : 68498099'
+            alertMessage = 'PASSCODEを入力してください。\nKEYWORD : 6 8 4 9 8 0 9 9'
         }else{
             if(countReload === 1) {
                 alertMessage = "...";
