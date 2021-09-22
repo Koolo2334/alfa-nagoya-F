@@ -315,7 +315,7 @@ button {
 }
 
 #section--third__input input, #section--fourth__input input {
-  width: 10%
+  width: 10.5%
 }
 
 .section__input div {
@@ -331,6 +331,10 @@ button {
 
 #section--second__input div {
   width: 14%;
+}
+
+#section--third__input div, #section--fourth__input div {
+  width: 10.5%
 }
 
 .sub-hint-wrap {
