@@ -658,7 +658,7 @@ button {
   display: flex;
 }
 
-.quiz3 p, .quiz3 h2, .quiz3 li {
+.quiz3 p, .quiz3 h2, .quiz3 ul {
   display: none;
 }
 
@@ -933,6 +933,7 @@ button {
   display: flex;
   padding: 20px;
   margin: 20px auto;
+  text-align: left;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
