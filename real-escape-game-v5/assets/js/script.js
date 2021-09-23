@@ -24,7 +24,7 @@ window.addEventListener('popstate', function(event) {
            window.history.pushState(null, null, null)
         }
         countReload++;
-        if (confirm('パスワードを確認しました。 脱出しますか？')) {
+        if (confirm('脱出しますか？')) {
             isClearGame = true;
             history.go(history.length * -1 + 1);
             location.replace('/alfa-nagoya-F/real-escape-game-v5/final?q=96');
