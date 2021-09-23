@@ -246,7 +246,7 @@ $('#btn-start').on('click', async function() {
         d.querySelector('.header__logo').querySelector('img').src = "assets/images/logoafter.png";
         $('body').addClass('black-thema');
         quiz1();
-        d.querySelector('.main_img').src = "assets/images/top-image_another.png";
+        d.querySelector('.main_img').src = "assets/images/top-image_another2.png";
         let str = [];
         $('#blackscreen__statement > span').each(function(i){
             $(this).css('opacity','1');
