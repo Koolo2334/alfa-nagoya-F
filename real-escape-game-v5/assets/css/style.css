@@ -662,6 +662,10 @@ button {
   display: flex;
 }
 
+.quiz3 #quiz3__sub-hint-wrap {
+  display: flex;
+}
+
 .quiz3 p, .quiz3 h2, .quiz3 ul {
   display: none;
 }
