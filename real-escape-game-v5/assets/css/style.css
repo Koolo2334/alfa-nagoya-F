@@ -666,7 +666,7 @@ button {
   display: flex;
 }
 
-.quiz3 #story__text, .quiz3 h2, .quiz3 ul {
+.quiz3 #story__text, .quiz3 #story__tips, .quiz3 h2, .quiz3 ul {
   display: none;
 }
 
