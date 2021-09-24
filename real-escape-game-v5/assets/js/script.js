@@ -32,10 +32,8 @@ window.addEventListener('popstate', function(event) {
             }
         }else if(isClearQuiz2) {
             alertMessage = 'ロックされています。PASSCODEを入力してください。\nKEYWORD : 6 8 4 9 8 0 9 9'
-            $('#btn-start--hint').css('display','none');
-            $('#btn-start').text('...');
             if(!$('#section--top').hasClass('quiz3')) {
-                $('#section--top').addClass('quiz3');
+                quiz3();
             }
         }else{
             if(countReload === 1) {
@@ -214,6 +212,18 @@ async function quiz2() {
     await delay(200);
     $('#quiz2__sub-hint3').addClass('show')
 }
+
+async function quiz3() {
+    $('#section--top').addClass('quiz3');
+    $('#btn-start--hint').css('display','none');
+    $('#btn-start').text('...');
+    await delay(200);
+    $('#quiz3__sub-hint1').addClass('show')
+    await delay(200);
+    $('#quiz3__sub-hint2').addClass('show')
+    await delay(200);
+    $('#quiz3__sub-hint3').addClass('show')
+}    
 
 document.addEventListener('touchmove', disableScroll, { passive: false });
 document.addEventListener('mousewheel', disableScroll, { passive: false });
