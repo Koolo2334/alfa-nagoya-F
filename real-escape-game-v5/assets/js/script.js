@@ -241,7 +241,7 @@ $('#first-screen').on('click', function() {
 
 $('#btn-start').on('click', async function() {
     countClickStartButton += 1;
-    let buttonOpacity = d.querySelector('#btn-start').style.opacity;
+    buttonOpacity = d.querySelector('#btn-start').style.opacity;
     d.querySelector('#btn-start').style.opacity = Number(buttonOpacity) += 0.333;
     d.querySelector('#btn-start').style.transition = "opacity linear 200ms 0ms";
     if(countClickStartButton === 3){
