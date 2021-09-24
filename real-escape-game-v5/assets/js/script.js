@@ -9,7 +9,8 @@ let isFocused = false,
     d = document,
     _checkchar_value = {},
     alertMessage = "",
-    password = ("00000000" + Math.floor(Math.random() * 100000000)).slice(-8);
+    password = ("00000000" + Math.floor(Math.random() * 100000000)).slice(-8),
+    buttonOpacity;
 
 window.addEventListener('beforeunload', function(e) {
     if(!isClearGame) {
