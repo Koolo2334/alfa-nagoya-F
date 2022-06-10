@@ -241,13 +241,6 @@ $('#first-screen').on('click', function() {
 
 $('#btn-start').on('click', async function() {
     countClickStartButton += 1;
-    if(countClickStartButton === 1){
-        buttonOpacity = 1;
-        d.querySelector('#btn-start').style.opacity = 1;
-    }
-    buttonOpacity = d.querySelector('#btn-start').style.opacity;
-    d.querySelector('#btn-start').style.opacity = Number(buttonOpacity) - 0.333;
-    d.querySelector('#btn-start').style.transition = "opacity linear 200ms 0ms";
     if(countClickStartButton === 3){
         await delay(1);
         $('#blackscreen').css('display','flex');
