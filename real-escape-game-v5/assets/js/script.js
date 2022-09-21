@@ -28,7 +28,7 @@ window.addEventListener('popstate', function(event) {
         if(isClearQuiz3) {
             if (confirm('脱出しますか？')) {
                 isClearGame = true;
-                history.go(history.length * -1 + 1);
+//                 history.go(history.length * -1 + 1);
                 location.replace('/alfa-nagoya-F/real-escape-game-v5/final?q=96');
             }
         }else if(isClearQuiz2) {
@@ -353,7 +353,7 @@ $('#btn-start').on('click', async function() {
             $(this).text('脱出する');
         }else if(countClickHintButton >= 123) {
             isClearGame = true;
-            window.location.href = '/alfa-nagoya-F/real-escape-game-v5/final?q=39';
+            window.location.replace = '/alfa-nagoya-F/real-escape-game-v5/final?q=39';
         }
     }else if(countClickStartButton >= 100 && !isClearQuiz1) {
         if(countClickStartButton === 100) {
@@ -368,7 +368,7 @@ $('#btn-start').on('click', async function() {
             if (confirm('パスワードを確認しました。 脱出しますか？')) {
                 isClearGame = true;
 //                 history.go(history.length * -1 + 1);
-                location.href('/alfa-nagoya-F/real-escape-game-v5/final?q=99');
+                location.replace('/alfa-nagoya-F/real-escape-game-v5/final?q=99');
             }
         }
     }
